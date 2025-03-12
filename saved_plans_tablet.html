@@ -1,13 +1,16 @@
+<!-- I made this and then realized it did not scale to full screen well -->
+<!-- just an alt design I guess, but I like the x+ transittion! -->
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/saved_plans.css">
     <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/saved_plans_tablet.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <title>View Saved Plans</title>
+    <title>View Plans</title>
 </head>
 <body>
     <header>
@@ -45,49 +48,39 @@
         </nav>
     </header>
     <div class="main">
-        <div class="plan_list">
-            <input type="radio" name="plan" value="Plan_#1" id="Plan_#1" checked> <!-- default on --> 
-            <label for="Plan_#1">Plan # 1</label>
-
-            <input type="radio" name="plan" value="Plan_Ambitious" id="Plan_Ambitious">
-            <label for="Plan_Ambitious">Plan Ambitious</label>
-
-            <input type="radio" name="plan" value="Plan_Insanity" id="Plan_Insanity">
-            <label for="Plan_Insanity">Plan Insanity</label>
-        </div>
-        <div class="plan_details">
-            <h2>Plan # 1</h2>
-            <hr>
-            <b>Major:</b> Computer Science <br>
-            <b>Minor:</b> None <br>
-            <b>Concentration:</b> Minimal <br>
-            <b>Spring/Summer:</b> Neither<Br>
-            <br>
-            <hr>
-            Degree requirements:
-            <div class="requirements">
-                <ul>
-                    <li>CPSC 231 and CPSC 233</li>
-                    <li>CPSC 251</li>
-                    <li>CPSC 351, CPSC 355, CPSC 413, CPSC 449, CPSC 457</li>
-                    <li>CPSC 331</li>
-                    <li>SENG 300</li>
-                    <li>Math 249 or Math 265 or Math 275</li>
-                    <li>Phil 279</li>
-                    <li>Phil 314</li>
-                    <li>Min 12 units Breadth requirement</li>
-                    <li>Min 18 units in optional courses outside the Field of Computer Science</li>
-                </ul>
+        <h2>USER's plans:</h2>
+        <details>
+            <summary>Plan #1</summary>
+            <div class="details_inner">
+                <p><b>Major:</b> Computer Science</p>
+                <p><b>Minor:</b> Bananarama</p>
+                <p><b>Concentration:</b> Spring</p>
+                <p><b>Spring/Summer:</b> Both</p>
             </div>
-
-
-            <button class="edit_button"></button>
-        </div>
+        </details>
+        <details>
+            <summary>Plan Ambitious</summary>
+            <div class="details_inner">
+                <p><b>Major:</b> Computer Science</p>
+                <p><b>Minor:</b> Math</p>
+                <p><b>Concentration:</b> Lacking</p>
+                <p><b>Spring/Summer:</b> Neither</p>
+            </div>
+        </details>
+        <details>
+            <summary>Plan Insanity</summary>
+            <div class="details_inner">
+                <p><b>Major:</b> Computer Science</p>
+                <p><b>Minor:</b> None</p>
+                <p><b>Concentration:</b> Graphics</p>
+                <p><b>Spring/Summer:</b> Both</p>
+            </div>
+        </details>
+        
     </div>
     <footer>
         <div class="footer_links">
             <a href="https://www.flaticon.com/free-icons/avatar" title="avatar icons">Avatar icons created by Freepik - Flaticon</a>
-            <a href="https://www.flaticon.com/free-icons/edit" title="edit icons">Edit icons created by alkhalifi design - Flaticon</a>
         </div>
         <p>
             &copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan. 

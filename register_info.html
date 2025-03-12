@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/register_info.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <title>Create Degree Plan</title>
+</head>
+<body>
+    <header>
+        <!-- we could make this via .js. Just select the header and make it programmatically, -->
+        <!-- then changes could happen in once place -->
+        <div class="header_icons">
+            <a href="index.html"><img src="img/Logo_Horz_Colour.png" alt="U of C logo" class="header_logo"></a>
+            <img src="img/avatar.png" alt="User profile pic" class="profile_img dropbtn">
+        </div>
+        <nav>
+            <div class="dropdown">
+                <button class="dropdown_btn">Information</button>
+                <div class="dropdown_content">
+                    <a href="">Degree Planner</a>
+                    <a href="register_info.html">Registration Info</a>
+                    <a href="course_search.html">Course Search</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Saved Plans</button>
+                <div class="dropdown_content">
+                    <a>Plan #1</a>
+                    <a>Plan ambitious</a>
+                    <a>Plan insanity</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Profile</button>
+                <div class="dropdown_content flow_right">
+                    <a>User profile</a>
+                    <a>Settings</a>
+                    <a>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <h2>Create new plan:</h2>
+        <div id="input_wrapper">
+            <div id="input_panel">
+                <label for="name">Name the plan: </label>
+                <!-- Just a few hard-coded options -->
+                <input type="text" name="name" id="name">
+                <label for="major">Major: </label>
+                <!-- Just a few hard-coded options -->
+                <select name="major" id="major">
+                    <option value="ANTH">Anthropology</option>
+                    <option value="CPSC">Computer Scince</option>
+                    <option value="ENGL">English</option>
+                    <option value="DEST">Global Development Studies</option>
+                    <option value="ITAL">Italian</option>
+                    <option value="BKIN">Kinesiology</option>
+                    <option value="MATH">Math!</option>
+                </select>
+                <!-- Just a few hard-coded options -->
+                <label for="concentration">Concentration: </label>
+                <select name="concentration" id="concentration">
+                    <option value="game_dev">Computer Game Development</option>
+                    <option value="graphics">Computer Graphics</option>
+                    <option value="hci">Human Computer Interaction</option>
+                    <option value="info_sec">Information Security</option>
+                    <option value="networks">Networks and Distributed Computing</option>
+                    <option value="computation">Scientific Computation</option>
+                    <option value="software">Software Engineering</option>
+                    <option value="theoretical">Theoretical Computer Science</option>
+                    <option value="visualization">Visualization and Analytics</option>
+                </select>
+                <!-- Just a few hard-coded options -->
+                <label for="minor">Minor: </label>
+                <select name="minor" id="minor">
+                    <option value="ANTH">Anthropology</option>
+                    <option value="CPSC">Computer Scince</option>
+                    <option value="ENGL">English</option>
+                    <option value="DEST">Global Development Studies</option>
+                    <option value="ITAL">Italian</option>
+                    <option value="BKIN">Kinesiology</option>
+                    <option value="MATH">Math!</option>
+                </select>
+                
+                <label for="semesters">Taking spring/ summer courses: </label>
+                <select name="semesters" id="semesters">
+                    <option value="none">None</option>
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="both">Both</option>
+                </select>
+            </div>
+            <button type="submit" class="regular_button">Submit</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_links">
+            <a href="https://www.flaticon.com/free-icons/avatar" title="avatar icons">Avatar icons created by Freepik - Flaticon</a>
+        </div>
+        <p>
+            &copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan. 
+        </p>
+    </footer>
+</body>
+</html>
