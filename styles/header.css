@@ -16,12 +16,12 @@ header {
 }
 
 .header_logo {
-    height: 3rem;
+    height: 6rem;
     max-width: 7rem;
     object-fit: contain;
 }
 .profile_img {
-    height: 2rem;
+    height: 6rem;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
