@@ -11,7 +11,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0rem 1.5rem;
+    /* padding: 0rem 1.5rem; */
     width: 100%;
 }
 
@@ -39,6 +39,9 @@ nav{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+}
+.shover{
+    flex: 1;
 }
 .dropdown {
     flex-grow: 1;
