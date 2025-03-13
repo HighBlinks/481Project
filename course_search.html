@@ -3,6 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="playground.css">
 </head>
@@ -15,14 +16,6 @@
             <img src="img/avatar.png" alt="User profile pic" class="profile_img dropbtn">
         </div>
         <nav>
-            <div class="dropdown">
-                <button class="dropdown_btn">Information</button>
-                <div class="dropdown_content">
-                    <a href="">Degree Planner</a>
-                    <a href="register_info.html">Registration Info</a>
-                    <a href="course_search.html">Course Search</a>
-                </div>
-            </div>
             <div class="dropdown">
                 <button class="dropdown_btn">Saved Plans</button>
                 <div class="dropdown_content">
@@ -40,10 +33,6 @@
                 </div>
             </div>
         </nav></header>
-    <div id="banner">
-        <div id="banner-content">
-            Degree Planner
-        </div>
     </div>
     <div id="mySidebar" class="sidebar">
         <h1>CPSC 481</h1>
@@ -62,18 +51,32 @@
     </div>
     <div id="main">
         <h2>Search Bar</h2>
-        <p>meow mew meow meow. meow meow meow meow meow meow meow meow meow meow meow meow.</p>
+        <input type="text" placeholder="Search by Course Code..">
+        <a href="saodfij">Filters:</a>
     </div>
-    <div id="playground" class="container">
+    <div id="playground" class="container"><img src="img/leBackground.png"></img>
+        <h3>Year 1</h3>
         <div id="year1">
+            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC231.png"></img></div>
+            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC251.png"></img></div>
             <div class="list" draggable="true"></div>
+            <div class="list" draggable="true"></div>
+            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC233.png"></img></div>
         </div>
+        <h3>Year 2</h3>
         <div id="year2">
-            <div class="list" draggable="true"><img src="leftbutton.png">Course 1</div>
-            <div class="list" draggable="true"><img src="leftbutton.png">Course 2</div>
-            <div class="list" draggable="true"><img src="leftbutton.png">Course 3</div>
+            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC331.png"></img></div>
+            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC351.png"></img></div>
+            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC355.png"></img></div>
         </div>
-        <div id="year3"></div>
+        <h3>Year 3</h3>
+        <div id="year3">
+            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC471.png"></img></div>
+            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC441.png"></img></div>
+            <div class="list" draggable="true"></div>
+            <div class="list" draggable="true"></div>
+            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC383.png"></img></div>
+        </div>
     </div>
 
     <script type="text/javascript" src="code.js"></script>
