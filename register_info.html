@@ -8,24 +8,64 @@
     <link rel="stylesheet" href="styles/footer.css">
 <style>
     
-h1 {text-align: center;}
+h1 {text-align: center;
+    font-size: 60px;
+    margin: auto;}
+
+.Ucalimg {
+  border: 5px solid black;
+}
+
+.main {
+    display: flex;
+    height:100%;
+    margin: 0%
+}
+
+.dLSection {
+    text-align: center;
+    width: 650px;
+    height:100%;
+    background-color:darkgrey;
+    padding:10px;
+    font-size: 40px
+}
+
+.linkSection {
+    text-align: center;
+    float: right;
+    width: 1300px;
+    height:100%;
+    padding:10px;
+    background-color:white;
+    font-size: 40px
+}
 
 .p1 {text-align: center;
-    width: 300px;
+    width: 400px;
     border: 15px solid green;
+    background-color:white;
     padding: 10px;
-    margin: auto;
+    margin-left: 110px;
     font-size: 40px}
 
 .p2 {text-align: center;
-    width: 300px;
+    width: 400px;
     border: 15px solid red;
+    background-color:white;
     padding: 10px;
-    margin: auto;
+    margin-left: 110px;
+    font-size: 40px}
+
+.myU {text-align: center;
+    width: 1050px;
+    background-color:white;
+    margin-left: 110px;
     font-size: 40px}
 
 .smol {text-align: center;
     font-size: 30px}
+
 
 
 </style>
@@ -65,22 +105,32 @@ h1 {text-align: center;}
             </div>
         </nav>
     </header>
-    <h1>Deadlines</h1>
+
+    <div class = "main">
+    <div class="dLSection">
+        <h1><u>Deadlines</u></h1>
    
-<p class="p1"><u>Course Registration</u><br>
-    Opens: April
-</p>
+        <p class="p1"><u>Course Registration</u><br>
+        Opens: April
+        </p>
+        <div class="p2"><u>Last day to drop class
+            without financial penalty</u><br>
+            <div class="smol">Fall: September 12th<br>
+                Winter: January 23rd<br>
+                Summer: May 9th<br>
+                Spring: June 27th<br>
+            </div>
+        </div>
+    </div>
 
-<br>
-
-<div class="p2"><u>Last day to drop class
-    without financial penalty</u><br>
-    <div class="smol">Fall: September 12th<br>
-        Winter: January 23rd<br>
-        Summer: May 9th<br>
-        Spring: June 27th<br>
+    <div class="linkSection">
+        <h1><u>Important Links</u></h1>
+        <a href="https://my.ucalgary.ca/"><p class="myU">
+            <img class = "Ucalimg" src="img/sampleMyUcalgary.png" alt="U of C">
+            MyUcalgary Website
+        </p></a>
+        
     </div>
 </div>
-
 </body>
 </html>
