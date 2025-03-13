@@ -23,6 +23,40 @@ h1 {text-align: center;}
 </style>
 </head>
 <body>
+    <header>
+        <!-- we could make this via .js. Just select the header and make it programmatically, -->
+        <!-- then changes could happen in once place -->
+        <div class="header_icons">
+            <a href="index.html"><img src="img/Logo_Horz_Colour.png" alt="U of C logo" class="header_logo"></a>
+            <img src="img/avatar.png" alt="User profile pic" class="profile_img dropbtn">
+        </div>
+        <nav>
+            <div class="dropdown">
+                <button class="dropdown_btn">Information</button>
+                <div class="dropdown_content">
+                    <a href="">Degree Planner</a>
+                    <a href="register_info.html">Registration Info</a>
+                    <a href="course_search.html">Course Search</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Saved Plans</button>
+                <div class="dropdown_content">
+                    <a>Plan #1</a>
+                    <a>Plan ambitious</a>
+                    <a>Plan insanity</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Profile</button>
+                <div class="dropdown_content flow_right">
+                    <a>User profile</a>
+                    <a>Settings</a>
+                    <a>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
     <h1>Deadlines</h1>
    
 <p class="p1"><u>Course Registration</u><br>
