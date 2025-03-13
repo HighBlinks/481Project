@@ -1,33 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div id="banner">
-	<div id="banner-content">
-    Degree Planner
-	</div>
-</div>
-<div id="mySidebar" class="sidebar">
-  <h1>CPSC 481</h1>
-  <h2>Terms Offered:</h2>
-  <img src="termsOffered.jpg" alt="Terms Offered" style="width:235px">
-  <h3>Prediction: </h3><p>Offered as Winter course every year since Winter 2020.</p>
-  <h2>Pre-Requisites:</h2>
-  <img src="skillTree.jpg" alt="Pre-Requisites" style="width:235px">
-  <h2 style="display: inline;">Difficulty: </h2><p>✰✰✰</p>
-</div>
-<div id="buttoner">
-	<button class="openbtn" onclick="toggleNav()" style="text-align:left;">Details<span style="float:right;">◀</span></button>  
-</div>
-<div id="main">
-  <h2>Search Bar</h2>
-  <p>meow meow meow meow. meow meow meow meow meow meow meow meow meow meow meow meow.</p>
-</div>
 
-<script type="text/javascript" src="code.js"></script>
-   
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="playground.css">
+</head>
+
+<body>
+    <div id="banner">
+        <div id="banner-content">
+            Degree Planner
+        </div>
+    </div>
+    <div id="mySidebar" class="sidebar">
+        <h1>CPSC 481</h1>
+        <h2>Terms Offered:</h2>
+        <img src="termsOffered.png" alt="Terms Offered" style="width:235px">
+        <h3>Prediction: </h3>
+        <p>Offered as Winter course every year since Winter 2020.</p>
+        <h2>Pre-Requisites:</h2>
+        <img src="skillTree.png" alt="Pre-Requisites" style="width:235px">
+        <h2 style="display: inline;">Difficulty: </h2>
+        <p style="font-size: 25px">✰✰✰</p>
+    </div>
+    <div id="buttoner">
+        <button class="openbtn" onclick="toggleNav()" style="text-align:left;">Details<span
+                style="float:right;">◀</span></button>
+    </div>
+    <div id="main">
+        <h2>Search Bar</h2>
+        <p>meow mew meow meow. meow meow meow meow meow meow meow meow meow meow meow meow.</p>
+    </div>
+    <div id="playground" class="container">
+        <div id="year1">
+            
+        </div>
+        <div id="year2">
+            <div class="list" draggable="true"><img src="leftbutton.png">Course 1</div>
+            <div class="list" draggable="true"><img src="leftbutton.png">Course 2</div>
+            <div class="list" draggable="true"><img src="leftbutton.png">Course 3</div>
+        </div>
+        <div id="year3"></div>
+    </div>
+
+    <script type="text/javascript" src="code.js">
+    
+    let lists = document.getElementByClassName("list");
+    let year1Box = document.getElementById("year1");
+    let year2Box = document.getElementById("year2");
+    let year3Box = document.getElementById("year3");
+    for(list of lists){
+        list.addEventListener("dragstart", function(e){
+            let selected = e.target;
+
+            year1Box.addEventListener("dragover", function(e){
+                e.preventDefault();
+            });
+
+            year1Box.addEventListener("drop", function(e){
+                year1Box.appendChild(selected);
+                selected = null;
+            });
+            year2Box.addEventListener("dragover", function(e){
+                e.preventDefault();
+            });
+            year2Box.addEventListener("drop", function(e){
+                year2Box.appendChild(selected);
+                selected = null;
+            });
+            year3Box.addEventListener("dragover", function(e){
+                e.preventDefault();
+            });
+            year3Box.addEventListener("drop", function(e){
+                year3Box.appendChild(selected);
+                selected = null;
+            });
+        })
+    }
+    </script>
+
 </body>
-</html> 
+
+</html>
