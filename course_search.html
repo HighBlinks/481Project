@@ -8,17 +8,30 @@
     <link rel="stylesheet" href="styles/course_search.css">
     <link rel="stylesheet" href="styles/playground.css">
 
-    <script defer type="text/javascript" src="code.js"></script>
+    <script defer type="text/javascript" src="js/code.js"></script>
 </head>
 
 <body>
-    <header><!-- we could make this via .js. Just select the header and make it programmatically, -->
+    <header>
+        <!-- we could make this via .js. Just select the header and make it programmatically, -->
         <!-- then changes could happen in once place -->
         <div class="header_icons">
-            <a href="index.html"><img src="img/Logo_Horz_Colour.png" alt="U of C logo" class="header_logo"></a>
-            <img src="img/avatar.png" alt="User profile pic" class="profile_img dropbtn">
+            <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
+            <div class = "textBox">
+                <h1>University of Calgary | Degree Navigator </h1>
+                <div class = "smol">Welcome back, Plebian Dūnce</div>
+            </div>
+            <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
         </div>
         <nav>
+            <div class="dropdown">
+                <button class="dropdown_btn">Information</button>
+                <div class="dropdown_content">
+                    <a href="">Degree Planner</a>
+                    <a href="register_info.html">Registration Info</a>
+                    <a href="course_search.html">Course Search</a>
+                </div>
+            </div>
             <div class="dropdown">
                 <button class="dropdown_btn">Saved Plans</button>
                 <div class="dropdown_content">
@@ -35,7 +48,8 @@
                     <a>Logout</a>
                 </div>
             </div>
-        </nav></header>
+        </nav>
+    </header>
     </div>
     <div id="mySidebar" class="sidebar">
         <h1>CPSC 481</h1>
