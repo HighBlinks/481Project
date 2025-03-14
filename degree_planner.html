@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <title>Degree Planner</title>
+    <link rel="stylesheet" href="styles/sidebar.css"> <!-- Sidebar styles -->
+    <title>Degree Navigator</title>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             fetch("header.html")
@@ -22,7 +23,21 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
+        .content {
+            display: flex;
+            flex-grow: 1; /* Allows the content to expand between header and footer */
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
         .year-header {
             background-color: red;
             color: white;
@@ -58,41 +73,93 @@
         .drag-over {
             border: 2px dashed yellow;
         }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 250px;
+            background: #f4f4f4;
+            padding: 15px;
+            border-right: 1px solid #ccc;
+        }
+        .sidebar.collapsed {
+            width: 0;
+            padding: 0;
+            overflow: hidden;
+            border: none;
+        }
+        #sidebar-toggle {
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div id="header-placeholder"></div> <!-- Header will load here -->
 
-    <h2>Degree Navigator</h2>
+    <div class="content">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Course Search</h3>
+            <input type="text" id="course-search" placeholder="Enter course code...">
 
-    <div class="year">
-        <div class="year-header">Year 1</div>
-        <div class="year-content">
-            <div class="term fall" id="fall1">
-                <strong>Fall Term</strong>
-                <div class="course" draggable="true" id="cpsc231">CPSC 231</div>
+            <h4>Filters</h4>
+            <form id="filter-form">
+                <label>Course Level:
+                    <select name="level">
+                        <option value="">All</option>
+                        <option value="200">200</option>
+                        <option value="300">300</option>
+                    </select>
+                </label>
+
+                <label>Term:
+                    <select name="term">
+                        <option value="">All</option>
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                    </select>
+                </label>
+            </form>
+
+            <ul id="course-list"></ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2>Degree Navigator</h2>
+
+            <div class="year">
+                <div class="year-header">Year 1</div>
+                <div class="year-content">
+                    <div class="term fall" id="fall1">
+                        <strong>Fall Term</strong>
+                        <div class="course" draggable="true" id="cpsc231">CPSC 231</div>
+                    </div>
+                    <div class="term winter" id="winter1">
+                        <strong>Winter Term</strong>
+                        <div class="course" draggable="true" id="cpsc251">CPSC 251</div>
+                    </div>
+                </div>
             </div>
-            <div class="term winter" id="winter1">
-                <strong>Winter Term</strong>
-                <div class="course" draggable="true" id="cpsc251">CPSC 251</div>
+
+            <div class="year">
+                <div class="year-header">Year 2</div>
+                <div class="year-content">
+                    <div class="term fall" id="fall2">
+                        <strong>Fall Term</strong>
+                        <div class="course" draggable="true" id="cpsc331">CPSC 331</div>
+                    </div>
+                    <div class="term winter" id="winter2">
+                        <strong>Winter Term</strong>
+                        <div class="course" draggable="true" id="cpsc351">CPSC 351</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="year">
-        <div class="year-header">Year 2</div>
-        <div class="year-content">
-            <div class="term fall" id="fall2">
-                <strong>Fall Term</strong>
-                <div class="course" draggable="true" id="cpsc331">CPSC 331</div>
-            </div>
-            <div class="term winter" id="winter2">
-                <strong>Winter Term</strong>
-                <div class="course" draggable="true" id="cpsc351">CPSC 351</div>
-            </div>
-        </div>
-    </div>
-
+    <script src="scripts/sidebar.js"></script>
     <script>
         // Collapsible accordion logic
         document.querySelectorAll(".year-header").forEach(header => {
@@ -138,6 +205,7 @@
             });
         });
     </script>
-     <div id="footer-placeholder"></div> <!-- Footer will load here -->
+
+    <div id="footer-placeholder"></div> <!-- Footer will load here -->
 </body>
 </html>
