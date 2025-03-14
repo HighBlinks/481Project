@@ -7,111 +7,137 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <title>Login</title>
+    <title>Degree Navigator</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        });
+    </script>
     <style>
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            background-color: #d32f2f; /* UCalgary red */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .year-header {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid white;
+        }
+        .year-content {
+            display: none; /* Hidden by default */
             padding: 10px;
         }
-
-        nav a {
-            text-decoration: none;
+        .term {
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px dashed black;
         }
-
-        nav button {
-            background-color: white;
-            color: #d32f2f;
-            border: 2px solid #d32f2f;
-            padding: 10px 15px;
-            font-size: 16px;
-            cursor: pointer;
+        .fall {
+            background-color: #ffcc99; /* Light Orange for Fall */
+        }
+        .winter {
+            background-color: #99ccff; /* Light Blue for Winter */
+        }
+        .course {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            background-color: pink;
             border-radius: 5px;
-            transition: background 0.3s ease, color 0.3s ease;
+            cursor: grab;
         }
-
-        nav button:hover {
-            background-color: #b71c1c; /* Darker red */
-            color: white;
+        .drag-over {
+            border: 2px dashed yellow;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header_icons">
-            <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
-            <div class="textBox">
-                <h1>University of Calgary | Degree Navigator</h1>
-                <div class="smol">Welcome back, Plebian Dūnce</div>
+    <div id="header-placeholder"></div> <!-- Header will load here -->
+
+    <h2>Degree Navigator</h2>
+
+    <div class="year">
+        <div class="year-header">Year 1</div>
+        <div class="year-content">
+            <div class="term fall" id="fall1">
+                <strong>Fall Term</strong>
+                <div class="course" draggable="true" id="cpsc231">CPSC 231</div>
             </div>
-            <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
-        </div>
-        <nav>
-            <a href="main_menu.html"><button>Main Menu</button></a>
-            <a href="settings.html"><button>Settings</button></a>
-            <a href="logout.html"><button>Logout</button></a>
-        </nav>
-    </header>
-    <div class="main">
-        <h2>Create new plan:</h2>
-        <div id="input_wrapper">
-            <div id="input_panel">
-                <label for="name">Name the plan: </label>
-                <!-- Just a few hard-coded options -->
-                <input type="text" name="name" id="name">
-                <label for="major">Major: </label>
-                <!-- Just a few hard-coded options -->
-                <select name="major" id="major">
-                    <option value="ANTH">Anthropology</option>
-                    <option value="CPSC">Computer Scince</option>
-                    <option value="ENGL">English</option>
-                    <option value="DEST">Global Development Studies</option>
-                    <option value="ITAL">Italian</option>
-                    <option value="BKIN">Kinesiology</option>
-                    <option value="MATH">Math!</option>
-                </select>
-                <!-- Just a few hard-coded options -->
-                <label for="concentration">Concentration: </label>
-                <select name="concentration" id="concentration">
-                    <option value="game_dev">Computer Game Development</option>
-                    <option value="graphics">Computer Graphics</option>
-                    <option value="hci">Human Computer Interaction</option>
-                    <option value="info_sec">Information Security</option>
-                    <option value="networks">Networks and Distributed Computing</option>
-                    <option value="computation">Scientific Computation</option>
-                    <option value="software">Software Engineering</option>
-                    <option value="theoretical">Theoretical Computer Science</option>
-                    <option value="visualization">Visualization and Analytics</option>
-                </select>
-                <!-- Just a few hard-coded options -->
-                <label for="minor">Minor: </label>
-                <select name="minor" id="minor">
-                    <option value="ANTH">Anthropology</option>
-                    <option value="CPSC">Computer Scince</option>
-                    <option value="ENGL">English</option>
-                    <option value="DEST">Global Development Studies</option>
-                    <option value="ITAL">Italian</option>
-                    <option value="BKIN">Kinesiology</option>
-                    <option value="MATH">Math!</option>
-                </select>
-                
-                <label for="semesters">Taking spring/ summer courses: </label>
-                <select name="semesters" id="semesters">
-                    <option value="none">None</option>
-                    <option value="spring">Spring</option>
-                    <option value="summer">Summer</option>
-                    <option value="both">Both</option>
-                </select>
+            <div class="term winter" id="winter1">
+                <strong>Winter Term</strong>
+                <div class="course" draggable="true" id="cpsc251">CPSC 251</div>
             </div>
-            <button type="submit" class="regular_button">Submit</button>
         </div>
     </div>
 
-    <footer>
-        <div class="footer_links"></div>
-        <p>&copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan.</p>
-    </footer>
+    <div class="year">
+        <div class="year-header">Year 2</div>
+        <div class="year-content">
+            <div class="term fall" id="fall2">
+                <strong>Fall Term</strong>
+                <div class="course" draggable="true" id="cpsc331">CPSC 331</div>
+            </div>
+            <div class="term winter" id="winter2">
+                <strong>Winter Term</strong>
+                <div class="course" draggable="true" id="cpsc351">CPSC 351</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Collapsible accordion logic
+        document.querySelectorAll(".year-header").forEach(header => {
+            header.addEventListener("click", () => {
+                const content = header.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
+
+        // Drag and Drop logic
+        const courses = document.querySelectorAll(".course");
+        const terms = document.querySelectorAll(".term");
+
+        courses.forEach(course => {
+            course.addEventListener("dragstart", (e) => {
+                e.dataTransfer.setData("text/plain", course.id);
+                setTimeout(() => {
+                    course.style.display = "none";
+                }, 0);
+            });
+
+            course.addEventListener("dragend", () => {
+                course.style.display = "inline-block";
+            });
+        });
+
+        terms.forEach(term => {
+            term.addEventListener("dragover", (e) => {
+                e.preventDefault();
+                term.classList.add("drag-over");
+            });
+
+            term.addEventListener("dragleave", () => {
+                term.classList.remove("drag-over");
+            });
+
+            term.addEventListener("drop", (e) => {
+                e.preventDefault();
+                const courseId = e.dataTransfer.getData("text/plain");
+                const course = document.getElementById(courseId);
+                term.appendChild(course);
+                term.classList.remove("drag-over");
+            });
+        });
+    </script>
+     <div id="footer-placeholder"></div> <!-- Footer will load here -->
 </body>
 </html>

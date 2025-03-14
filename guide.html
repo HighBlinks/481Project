@@ -8,57 +8,22 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/footer.css">
     <title>Login</title>
-    <style>
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            background-color: #d32f2f; /* UCalgary red */
-            padding: 10px;
-        }
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header-placeholder").innerHTML = data);
 
-        nav a {
-            text-decoration: none;
-        }
-
-        nav button {
-            background-color: white;
-            color: #d32f2f;
-            border: 2px solid #d32f2f;
-            padding: 10px 15px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        nav button:hover {
-            background-color: #b71c1c; /* Darker red */
-            color: white;
-        }
-    </style>
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <div class="header_icons">
-            <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
-            <div class="textBox">
-                <h1>University of Calgary | Degree Navigator</h1>
-                <div class="smol">Welcome back, Plebian Dūnce</div>
-            </div>
-            <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
-        </div>
-        <nav>
-            <a href="degree_planner.html"><button>Degree Planner</button></a>
-            <a href="main_menu.html"><button>Main Menu</button></a>
-            <a href="settings.html"><button>Settings</button></a>
-            <a href="logout.html"><button>Logout</button></a>
-        </nav>
-    </header>
 
-    <footer>
-        <div class="footer_links"></div>
-        <p>&copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan.</p>
-    </footer>
+    <div id="header-placeholder"></div> <!-- Header will load here -->
+
+    <div id="footer-placeholder"></div> <!-- Footer will load here -->
 </body>
 </html>

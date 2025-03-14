@@ -10,21 +10,22 @@
     <title>Create Degree Plan</title>
 </head>
 <body>
-    <header>
-        <div class="header_icons">
-            <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
-            <div class="textBox">
-                <h1>University of Calgary | Degree Navigator</h1>
-                <div class="smol">Welcome back, Plebian Dūnce</div>
-            </div>
-            <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
-        </div>
-        <nav>
-            <a href="main_menu.html"><button>Main Menu</button></a>
-            <a href="settings.html"><button>Settings</button></a>
-            <a href="logout.html"><button>Logout</button></a>
-        </nav>
-    </header>
+    <title>Login</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        });
+    </script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div> <!-- Header will load here -->
     <div class="main">
         <h2>Create new plan:</h2>
         <div id="input_wrapper">
@@ -76,16 +77,9 @@
                     <option value="both">Both</option>
                 </select>
             </div>
-            <button type="submit" class="regular_button">Submit</button>
+            <a href="degree_planner.html"><button>Submit</button></a>
         </div>
     </div>
-    <footer>
-        <div class="footer_links">
-            <a href="https://www.flaticon.com/free-icons/avatar" title="avatar icons">Avatar icons created by Freepik - Flaticon</a>
-        </div>
-        <p>
-            &copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan. 
-        </p>
-    </footer>
+    <div id="footer-placeholder"></div> <!-- Footer will load here -->
 </body>
 </html>
