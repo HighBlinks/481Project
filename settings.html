@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <title>Login</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        });
+    </script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div> <!-- Header will load here -->
+
+    <main>
+        <section>
+            <h2>Add static buttons like font size, change username, profile pic etc.</h2>
+
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div> <!-- Footer will load here -->
+</body>
+</html>

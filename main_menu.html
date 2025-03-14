@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <title>Login</title>
+    <style>
+        .main nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; 
+            margin-top: 20px;
+        }
+        
+        .main nav a {
+            width: 80%; 
+            text-align: center;
+        }
+
+        .main nav button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            background-color: #d32f2f; /* UCalgary red */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        nav button {
+            background-color: white;
+            color: #d32f2f;
+            border: 2px solid #d32f2f;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .main nav button:hover {
+            background-color: #b71c1c; /* Darker red for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_icons">
+            <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
+            <div class="textBox">
+                <h1>University of Calgary | Degree Navigator</h1>
+                <div class="smol">Welcome back, Plebian Dūnce</div>
+            </div>
+            <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
+        </div>
+        <nav>
+            <a href="settings.html"><button>Settings</button></a>
+            <a href="index.html"><button>Logout</button></a>
+        </nav>
+    </header>
+    <div class="main">
+        <nav>
+            <a href="saved_plans.html"><button>Saved Plans</button></a>
+            <a href="create_plan.html"><button>Make A New Plan</button></a>
+            <a href="deadlines.html"><button> U of C Registeration Deadlines & Info</button></a>
+            <a href="guide.html"><button>User Guide</button></a>
+        </nav>
+    </div>
+    <footer>
+        <div class="footer_links"></div>
+        <p>&copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan.</p>
+    </footer>
+</body>
+</html>

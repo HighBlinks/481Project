@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <title>Login</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header-placeholder").innerHTML = data);
+
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        });
+    </script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div> <!-- Header will load here -->
+
+    <main>
+        <section class="first-time-users">
+            <h2>First Time Users</h2>
+            <p>Login with your University of Calgary username and password.</p>
+            <p>Select <strong>Create New Plan</strong>.</p>
+            <p>Enter your degree details.</p>
+            <p>Click <strong>Submit</strong>.</p>
+            <p>Next, you will be redirected to the <strong>Degree Planning Page</strong>, where you can:</p>
+            <ul>
+                <li>See required courses.</li>
+                <li>Select prerequisites.</li>
+                <li>Add more...</li>
+            </ul>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div> <!-- Footer will load here -->
+</body>
+</html>

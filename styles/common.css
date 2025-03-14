@@ -34,9 +34,6 @@ select{
 
 .main button:hover {
     background: #b82036; /* Darker red on hover */
-    background-image: url('../img/edit.png'); /* out of /styles, into /img */
-    background-size: cover;
-    background-position: center;
 }
 
 .edit_button{
@@ -56,4 +53,11 @@ select{
     border-radius: 6px;
 
     cursor: pointer;
+}
+
+.edit_button:hover {
+    background: #b82036; /* Darker red on hover */
+    background-image: url('../img/edit.png'); /* out of /styles, into /img */
+    background-size: cover;
+    background-position: center;
 }
