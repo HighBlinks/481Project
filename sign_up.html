@@ -13,12 +13,22 @@
 </head>
 <body>
     <div id="header-login-placeholder"></div> <!-- Header will load here -->
-
-    <main>
-        <section >
-            <h2>add static bar for create username, create password confirm password etc.</h2>
-        </section>
-    </main>
+    <div class="main">
+        <div class="login_panel">
+            <h2 class="welcome">Welcome!</h2>
+            <div class="input_panel">
+                <label for="username"> Enter Username: </label>
+                <input type="text" id="username" name="username">
+                <label for="password">Enter Password: </label>
+                <input type="password" id="password" name="password">
+                <label for="password">Confirm Password: </label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="btn_panel">
+                <button class="regular_button login_btn"onclick="location.href='index.html'"> Create Account</button> 
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer_links"></div>
