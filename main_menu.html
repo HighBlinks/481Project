@@ -8,16 +8,44 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/footer.css">
     <title>Login</title>
+    <style>
+        .main nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px; 
+            margin-top: 20px;
+        }
+        
+        .main nav a {
+            width: 80%; 
+            text-align: center;
+        }
+
+        .main nav button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            background-color: #d32f2f; /* UCalgary red */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .main nav button:hover {
+            background-color: #b71c1c; /* Darker red for hover effect */
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- we could make this via .js. Just select the header and make it programmatically, -->
-        <!-- then changes could happen in once place -->
         <div class="header_icons">
             <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
-            <div class = "textBox">
-                <h1>University of Calgary | Degree Navigator </h1>
-                <div class = "smol">Welcome back, Plebian Dūnce</div>
+            <div class="textBox">
+                <h1>University of Calgary | Degree Navigator</h1>
+                <div class="smol">Welcome back, Plebian Dūnce</div>
             </div>
             <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
         </div>
@@ -31,14 +59,6 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropdown_btn">Saved Plans</button>
-                <div class="dropdown_content">
-                    <a>Plan #1</a>
-                    <a>Plan ambitious</a>
-                    <a>Plan insanity</a>
-                </div>
-            </div>
-            <div class="dropdown">
                 <button class="dropdown_btn">Profile</button>
                 <div class="dropdown_content flow_right">
                     <a>User profile</a>
@@ -49,26 +69,17 @@
         </nav>
     </header>
     <div class="main">
-        <div class="login_panel">
-            <h2 class="welcome">Welcome!</h2>
-            <div class="input_panel">
-                <label for="username">Username: </label>
-                <input type="text" id="username" name="username">
-                <label for="password">Password: </label>
-                <input type="text" id="password" name="password">
-            </div>
-            <div class="btn_panel">
-                <button class="regular_button login_btn">Submit</button> 
-                <button class="regular_button login_btn">Sign up</button>
-            </div>
-        </div>
+        <nav>
+            <a href="saved_plans.html"><button>Saved Plans</button></a>
+            <a href="choose_plan.html"><button>Make A New Plan</button></a>
+            <a href="register_info.html"><button>Register Info</button></a>
+            <a href="deadlines.html"><button>Deadlines</button></a>
+            <a href="guide.html"><button>User Guide</button></a>
+        </nav>
     </div>
     <footer>
-        <div class="footer_links">
-        </div>
-        <p>
-            &copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan. 
-        </p>
+        <div class="footer_links"></div>
+        <p>&copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan.</p>
     </footer>
 </body>
 </html>
