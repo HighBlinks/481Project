@@ -33,7 +33,16 @@
             border-radius: 5px;
             transition: background 0.3s ease;
         }
-
+        nav button {
+            background-color: white;
+            color: #d32f2f;
+            border: 2px solid #d32f2f;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
         .main nav button:hover {
             background-color: #b71c1c; /* Darker red for hover effect */
         }
@@ -50,29 +59,14 @@
             <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
         </div>
         <nav>
-            <div class="dropdown">
-                <button class="dropdown_btn">Information</button>
-                <div class="dropdown_content">
-                    <a href="">Degree Planner</a>
-                    <a href="register_info.html">Registration Info</a>
-                    <a href="course_search.html">Course Search</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown_btn">Profile</button>
-                <div class="dropdown_content flow_right">
-                    <a>User profile</a>
-                    <a>Settings</a>
-                    <a>Logout</a>
-                </div>
-            </div>
+            <a href="settings.html"><button>Settings</button></a>
         </nav>
     </header>
     <div class="main">
         <nav>
             <a href="saved_plans.html"><button>Saved Plans</button></a>
-            <a href="degree_planner.html"><button>Make A New Plan</button></a>
-            <a href="register_info.html"><button> U of C Registeration Deadlines & Info</button></a>
+            <a href="create_plan.html"><button>Make A New Plan</button></a>
+            <a href="deadlines.html"><button> U of C Registeration Deadlines & Info</button></a>
             <a href="guide.html"><button>User Guide</button></a>
         </nav>
     </div>
