@@ -7,27 +7,120 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/degree_planner.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <title>Degree Planner</title>
+    <title>Degree Navigator</title>
 
     <script defer src="js/degree_planner.js"></script>
     <script defer src="js/load_header_and_footer.js"></script>
+    <script defer src="js/sidebar.js"></script>
+    <script defer src="js/main-content.js"></script>
 </head>
 <body>
     <div id="header-placeholder"></div> <!-- Header will load here -->
 
-    <h2>Degree Navigator</h2>
+    <div class="content">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Course Search</h3>
+            <input type="text" id="course-search" placeholder="Enter course code...">
 
-    <div class="year">
-        <div class="year-header">Year 1</div>
-        <div class="year-content">
-            <div class="term fall" id="fall1">
-                <strong>Fall Term</strong>
-                <div class="course" draggable="true" id="cpsc231">CPSC 231</div>
+            <h4>Filters</h4>
+            <form id="filter-form">
+                <label>Course Level:
+                    <select name="level">
+                        <option value="">All</option>
+                        <option value="200">200</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                        <option value="500">500</option>
+                    </select>
+                </label>
+
+                <label>Term:
+                    <select name="term">
+                        <option value="">All</option>
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                        <option value="Fall">Spring</option>
+                        <option value="Winter">Summer</option>
+                    </select>
+                </label>
+
+                <label>Difficulty:
+                    <select name="diff">
+                        <option value="">Any</option>
+                        <option value="1">💀</option>
+                        <option value="2">💀💀</option>
+                        <option value="3">💀💀💀</option>
+                        <option value="4">💀💀💀💀</option>
+                        <option value="5">💀💀💀💀💀</option>
+                    </select>
+                </label>
+
+            </form>
+
+            <ul id="course-list"></ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2>Degree Navigator</h2>
+
+            <div class="year">
+                <div class="year-header">Year 1</div>
+                <div class="year-content">
+                    <div class="term fall" id="fall1">
+                        <strong>Fall Term</strong>
+                        <div class="course" draggable="true" id="cpsc231">CPSC 231</div>
+                    </div>
+                    <div class="term winter" id="winter1">
+                        <strong>Winter Term</strong>
+                        <div class="course" draggable="true" id="cpsc251">CPSC 251</div>
+                    </div>
+                </div>
             </div>
-            <div class="term winter" id="winter1">
-                <strong>Winter Term</strong>
-                <div class="course" draggable="true" id="cpsc251">CPSC 251</div>
+
+            <div class="year">
+                <div class="year-header">Year 2</div>
+                <div class="year-content">
+                    <div class="term fall" id="fall2">
+                        <strong>Fall Term</strong>
+                        <div class="course" draggable="true" id="cpsc331">CPSC 331</div>
+                    </div>
+                    <div class="term winter" id="winter2">
+                        <strong>Winter Term</strong>
+                        <div class="course" draggable="true" id="cpsc351">CPSC 351</div>
+                    </div>
+                </div>
             </div>
+
+            <div class="year">
+                <div class="year-header">Year 3</div>
+                <div class="year-content">
+                    <div class="term fall" id="fall1">
+                        <strong>Fall Term</strong>
+                        <div class="course" draggable="true" id="cpsc481">CPSC 481</div>
+                    </div>
+                    <div class="term winter" id="winter1">
+                        <strong>Winter Term</strong>
+                        <div class="course" draggable="true" id="cpsc451">CPSC 451</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year">
+                <div class="year-header">Year 4</div>
+                <div class="year-content">
+                    <div class="term fall" id="fall1">
+                        <strong>Fall Term</strong>
+                        <div class="course" draggable="true" id="cpsc505">CPSC 505</div>
+                    </div>
+                    <div class="term winter" id="winter1">
+                        <strong>Winter Term</strong>
+                        <div class="course" draggable="true" id="cpsc599">CPSC 599</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
