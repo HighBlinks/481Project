@@ -7,4 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("footer.html")
         .then(response => response.text())
         .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    
+    fetch("login_header.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-login-placeholder").innerHTML = data);
 });
