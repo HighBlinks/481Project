@@ -8,10 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Static list of courses (simulating database without backend)
     const courses = [
-        { code: "CPSC 231", level: 200, term: "Fall", difficulty: 3 },
-        { code: "CPSC 251", level: 200, term: "Winter", difficulty: 2 },
-        { code: "CPSC 331", level: 300, term: "Fall", difficulty: 4 },
-        { code: "CPSC 351", level: 300, term: "Winter", difficulty: 3 }
+        { code: "CPSC 231", level: 200, term: "Fall", difficulty: "3" },
+        { code: "CPSC 251", level: 200, term: "Winter", difficulty: "2" },
+        { code: "CPSC 331", level: 300, term: "Fall", difficulty: "4" },
+        { code: "CPSC 351", level: 300, term: "Winter", difficulty: "3" },
+        { code: "CPSC 481", level: 300, term: "Fall", difficulty: "4" },
+        { code: "CPSC 451", level: 300, term: "Winter", difficulty: "3" },
+        { code: "CPSC 505", level: 300, term: "Fall", difficulty: "4" },
+        { code: "CPSC 599", level: 300, term: "Winter", difficulty: "3" },
     ];
 
 
@@ -21,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formData = new FormData(filterForm);
         const selectedLevel = formData.get("level");
         const selectedTerm = formData.get("term");
-
+        const selectedDiff = formData.get("diff");
         // Clear previous list
         courseList.innerHTML = "";
 
@@ -30,14 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
             return (
                 (searchValue === "" || course.code.includes(searchValue)) &&
                 (!selectedLevel || course.level == selectedLevel) &&
-                (!selectedTerm || course.term === selectedTerm)
+                (!selectedTerm || course.term === selectedTerm) && (!selectedDiff || course.difficulty === selectedDiff)
             );
         });
 
         // Display filtered courses
         filteredCourses.forEach(course => {
             const li = document.createElement("li");
-            li.textContent = `${course.code} - ${course.term} (Lvl ${course.level})`;
+            li.textContent = `${course.code} - ${course.term}`;
             courseList.appendChild(li);
         });
     }
