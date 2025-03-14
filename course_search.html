@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/course_search.css">
     <link rel="stylesheet" href="styles/playground.css">
 
     <script defer type="text/javascript" src="code.js"></script>
@@ -56,29 +57,36 @@
         <input type="text" placeholder="Search by Course Code..">
         <a href="saodfij">Filters:</a>
     </div>
-    <div id="playground" class="container">
-        <img src="img/leBackground.png"></img>
-        <h3>Year 1</h3>
-        <div id="year1">
-            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC231.png"></img></div>
-            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC251.png"></img></div>
-            <div class="list" draggable="true"></div>
-            <div class="list" draggable="true"></div>
-            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC233.png"></img></div>
+    <div class="container">
+        <div class="year">
+            <h3>Year 1</h3>
+            <div class="semester fall">
+                <div class="course_tile" draggable="true">CPSC231</div>
+                <div class="course_tile" draggable="true">CPSC251</div>
+                <div class="course_tile" draggable="true"></div>
+            </div>
+            <div class="semester winter">
+                <div class="course_tile" draggable="true"></div>
+                <div class="course_tile" draggable="true">CPSC233</div>
+            </div>
         </div>
-        <h3>Year 2</h3>
-        <div id="year2">
-            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC331.png"></img></div>
-            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC351.png"></img></div>
-            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC355.png"></img></div>
+        <div class="year">
+            <h3>Year 2</h3>
+            <div class="semester fall">
+                <div class="course_tile" draggable="true">CPSC331</div>
+                <div class="course_tile" draggable="true">CPSC351</div>
+                <div class="course_tile" draggable="true">CPSC355</div>
+            </div>
         </div>
-        <h3>Year 3</h3>
-        <div id="year3">
-            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC471.png"></img></div>
-            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC441.png"></img></div>
-            <div class="list" draggable="true"></div>
-            <div class="list" draggable="true"></div>
-            <div class="list" draggable="true"><img src="img/Course_Icons/CPSC383.png"></img></div>
+        <div class="year">
+            <h3>Year 3</h3>
+            <div class="semester spring">
+                <div class="course_tile" draggable="true">CPSC471</div>
+                <div class="course_tile" draggable="true">CPSC441</div>
+                <div class="course_tile" draggable="true"></div>
+                <div class="course_tile" draggable="true"></div>
+                <div class="course_tile" draggable="true">CPSC383</div>
+            </div>
         </div>
     </div>
 
