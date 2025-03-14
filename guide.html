@@ -7,18 +7,9 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <title>Login</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => document.getElementById("header-placeholder").innerHTML = data);
+    <title>Guide</title>
 
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-        });
-    </script>
+    <script defer src="js/load_header_and_footer.js"></script>
 </head>
 <body>
 
