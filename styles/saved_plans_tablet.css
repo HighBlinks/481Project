@@ -1,0 +1,55 @@
+details{
+    margin: 1rem 0rem;
+    border-radius: 0.75rem;
+    box-shadow: 0px 5px 8px rgba(0,0,0,0.2);
+}
+details summary {
+    position: relative;
+    padding: 0.8rem 1.2rem;
+    list-style: none;
+
+    border: 2px solid #d0d0d0;
+    border-radius: 0.75rem;
+    
+    background-color: #f0f0f0;
+    font-size: large;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+details[open] summary{
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    background-color: #e0e0e0;
+    border-color: #b0b0b0;
+}
+details summary:hover {
+    background-color: #e0e0e0;
+    border-color: #b0b0b0;
+}
+.details_inner{
+    padding: 0rem 1.2rem 0.8rem;
+    transition: 2s linear;
+}
+
+/* attribution: + to x transition: ----------------------------------
+https://codepen.io/frederickallen/pen/NZMEMw */
+summary::after{
+    content: "+";
+    position: absolute;
+    right: 0;
+    transition: 2s linear;
+}
+details summary:after {
+    content: "+";
+    color: black;
+    position: absolute;
+    font-size: 2rem;
+    line-height: 0;
+    margin-top: 0.75rem;
+    right: 0.75rem;
+    transition: 200ms linear;
+}
+details[open] summary:after {
+    transform: rotate(45deg);
+}
+/* end of attribution ------------------------------------ */

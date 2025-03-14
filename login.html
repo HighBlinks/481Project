@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <!-- we could make this via .js. Just select the header and make it programmatically, -->
+        <!-- then changes could happen in once place -->
+        <div class="header_icons">
+            <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
+            <div class = "textBox">
+                <h1>University of Calgary | Degree Navigator </h1>
+                <div class = "smol">Welcome back, Plebian Dūnce</div>
+            </div>
+            <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
+        </div>
+        <nav>
+            <div class="dropdown">
+                <button class="dropdown_btn">Information</button>
+                <div class="dropdown_content">
+                    <a href="">Degree Planner</a>
+                    <a href="register_info.html">Registration Info</a>
+                    <a href="course_search.html">Course Search</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Saved Plans</button>
+                <div class="dropdown_content">
+                    <a>Plan #1</a>
+                    <a>Plan ambitious</a>
+                    <a>Plan insanity</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Profile</button>
+                <div class="dropdown_content flow_right">
+                    <a>User profile</a>
+                    <a>Settings</a>
+                    <a>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="login_panel">
+            <h2 class="welcome">Welcome!</h2>
+            <div class="input_panel">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username">
+                <label for="password">Password: </label>
+                <input type="text" id="password" name="password">
+            </div>
+            <div class="btn_panel">
+                <button class="regular_button login_btn">Submit</button> 
+                <button class="regular_button login_btn">Sign up</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_links">
+        </div>
+        <p>
+            &copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan. 
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/saved_plans.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <title>View Saved Plans</title>
+</head>
+<body>
+    <header>
+        <!-- we could make this via .js. Just select the header and make it programmatically, -->
+        <!-- then changes could happen in once place -->
+        <div class="header_icons">
+            <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
+            <div class = "textBox">
+                <h1>University of Calgary | Degree Navigator </h1>
+                <div class = "smol">Welcome back, Plebian Dūnce</div>
+            </div>
+            <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
+        </div>
+        <nav>
+            <div class="dropdown">
+                <button class="dropdown_btn">Information</button>
+                <div class="dropdown_content">
+                    <a href="">Degree Planner</a>
+                    <a href="register_info.html">Registration Info</a>
+                    <a href="course_search.html">Course Search</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Saved Plans</button>
+                <div class="dropdown_content">
+                    <a>Plan #1</a>
+                    <a>Plan ambitious</a>
+                    <a>Plan insanity</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Profile</button>
+                <div class="dropdown_content flow_right">
+                    <a>User profile</a>
+                    <a>Settings</a>
+                    <a>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="plan_list">
+            <input type="radio" name="plan" value="Plan_#1" id="Plan_#1" checked> <!-- default on --> 
+            <label for="Plan_#1">Plan # 1</label>
+
+            <input type="radio" name="plan" value="Plan_Ambitious" id="Plan_Ambitious">
+            <label for="Plan_Ambitious">Plan Ambitious</label>
+
+            <input type="radio" name="plan" value="Plan_Insanity" id="Plan_Insanity">
+            <label for="Plan_Insanity">Plan Insanity</label>
+        </div>
+        <div class="plan_details">
+            <h2>Plan # 1</h2>
+            <hr>
+            <b>Major:</b> Computer Science <br>
+            <b>Minor:</b> None <br>
+            <b>Concentration:</b> Minimal <br>
+            <b>Spring/Summer:</b> Neither<Br>
+            <br>
+            <hr>
+            Degree requirements:
+            <div class="requirements">
+                <ul>
+                    <li>CPSC 231 and CPSC 233</li>
+                    <li>CPSC 251</li>
+                    <li>CPSC 351, CPSC 355, CPSC 413, CPSC 449, CPSC 457</li>
+                    <li>CPSC 331</li>
+                    <li>SENG 300</li>
+                    <li>Math 249 or Math 265 or Math 275</li>
+                    <li>Phil 279</li>
+                    <li>Phil 314</li>
+                    <li>Min 12 units Breadth requirement</li>
+                    <li>Min 18 units in optional courses outside the Field of Computer Science</li>
+                </ul>
+            </div>
+
+
+            <button class="edit_button"></button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_links">
+            <a href="https://www.flaticon.com/free-icons/avatar" title="avatar icons">Avatar icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/edit" title="edit icons">Edit icons created by alkhalifi design - Flaticon</a>
+        </div>
+        <p>
+            &copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan. 
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!-- I made this and then realized it did not scale to full screen well -->
+<!-- just an alt design I guess, but I like the x+ transittion! -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/saved_plans_tablet.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <title>View Plans</title>
+</head>
+<body>
+    <header>
+        <!-- we could make this via .js. Just select the header and make it programmatically, -->
+        <!-- then changes could happen in once place -->
+        <div class="header_icons">
+            <a href="index.html"><img src="img/Logo_Horz_Colour.png" alt="U of C logo" class="header_logo"></a>
+            <img src="img/avatar.png" alt="User profile pic" class="profile_img dropbtn">
+        </div>
+        <nav>
+            <div class="dropdown">
+                <button class="dropdown_btn">Information</button>
+                <div class="dropdown_content">
+                    <a href="">Degree Planner</a>
+                    <a href="register_info.html">Registration Info</a>
+                    <a href="course_search.html">Course Search</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Saved Plans</button>
+                <div class="dropdown_content">
+                    <a>Plan #1</a>
+                    <a>Plan ambitious</a>
+                    <a>Plan insanity</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown_btn">Profile</button>
+                <div class="dropdown_content flow_right">
+                    <a>User profile</a>
+                    <a>Settings</a>
+                    <a>Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <h2>USER's plans:</h2>
+        <details>
+            <summary>Plan #1</summary>
+            <div class="details_inner">
+                <p><b>Major:</b> Computer Science</p>
+                <p><b>Minor:</b> Bananarama</p>
+                <p><b>Concentration:</b> Spring</p>
+                <p><b>Spring/Summer:</b> Both</p>
+            </div>
+        </details>
+        <details>
+            <summary>Plan Ambitious</summary>
+            <div class="details_inner">
+                <p><b>Major:</b> Computer Science</p>
+                <p><b>Minor:</b> Math</p>
+                <p><b>Concentration:</b> Lacking</p>
+                <p><b>Spring/Summer:</b> Neither</p>
+            </div>
+        </details>
+        <details>
+            <summary>Plan Insanity</summary>
+            <div class="details_inner">
+                <p><b>Major:</b> Computer Science</p>
+                <p><b>Minor:</b> None</p>
+                <p><b>Concentration:</b> Graphics</p>
+                <p><b>Spring/Summer:</b> Both</p>
+            </div>
+        </details>
+        
+    </div>
+    <footer>
+        <div class="footer_links">
+            <a href="https://www.flaticon.com/free-icons/avatar" title="avatar icons">Avatar icons created by Freepik - Flaticon</a>
+        </div>
+        <p>
+            &copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan. 
+        </p>
+    </footer>
+</body>
+</html>
