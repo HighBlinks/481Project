@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
+/* ------------------------ main content (right box) -------------------- */
+.sidebar img{
+    width:235px;
+}
+.sidebar .inline{
+    display: inline;
+}
+.sidebar .difficulty{
+    font-size: 25px;
+}
+.openbtn{
+    text-align: left;
+}
+.openbtn span{
+    float:right;
+}
+
+/* ------------------------ main content (right box) -------------------- */
 .container{
     display: flex;
     flex-direction: column;

@@ -15,22 +15,24 @@
 <body>
     <div id="header-placeholder"></div> <!-- Header will load here -->
     
-    </div>
     <div id="mySidebar" class="sidebar">
         <h1>CPSC 481</h1>
         <h2>Terms Offered:</h2>
-        <img src="img/termsOffered.png" alt="Terms Offered" style="width:235px">
+        <img src="img/termsOffered.png" alt="Terms Offered">
         <h3>Prediction: </h3>
         <p>Offered as Winter course every year since Winter 2020.</p>
         <h2>Pre-Requisites:</h2>
-        <img src="img/skillTree.png" alt="Pre-Requisites" style="width:235px">
-        <h2 style="display: inline;">Difficulty: </h2>
-        <p style="font-size: 25px">✰✰✰</p>
+        <img src="img/skillTree.png" alt="Pre-Requisites">
+        <h2 class="inline">Difficulty: </h2>
+        <p class="difficulty">✰✰✰</p>
     </div>
     <div id="buttoner">
-        <button class="openbtn" onclick="toggleNav()" style="text-align:left;">Details<span
-                style="float:right;">◀</span></button>
+        <button class="openbtn" onclick="toggleNav()">
+            Details
+            <span>◀</span>
+        </button>
     </div>
+
     <div id="main">
         <h2>Search Bar</h2>
         <input type="text" placeholder="Search by Course Code..">
