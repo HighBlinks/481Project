@@ -19,9 +19,18 @@
         }
         .year-content {
             display: none; /* Hidden by default */
-            border: 2px dashed white;
-            background-color: #f0f0f0;
             padding: 10px;
+        }
+        .term {
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px dashed black;
+        }
+        .fall {
+            background-color: #ffcc99; /* Light Orange for Fall */
+        }
+        .winter {
+            background-color: #99ccff; /* Light Blue for Winter */
         }
         .course {
             display: inline-block;
@@ -42,17 +51,29 @@
 
     <div class="year">
         <div class="year-header">Year 1</div>
-        <div class="year-content" id="year1">
-            <div class="course" draggable="true" id="cpsc231">CPSC 231</div>
-            <div class="course" draggable="true" id="cpsc251">CPSC 251</div>
+        <div class="year-content">
+            <div class="term fall" id="fall1">
+                <strong>Fall Term</strong>
+                <div class="course" draggable="true" id="cpsc231">CPSC 231</div>
+            </div>
+            <div class="term winter" id="winter1">
+                <strong>Winter Term</strong>
+                <div class="course" draggable="true" id="cpsc251">CPSC 251</div>
+            </div>
         </div>
     </div>
 
     <div class="year">
         <div class="year-header">Year 2</div>
-        <div class="year-content" id="year2">
-            <div class="course" draggable="true" id="cpsc331">CPSC 331</div>
-            <div class="course" draggable="true" id="cpsc351">CPSC 351</div>
+        <div class="year-content">
+            <div class="term fall" id="fall2">
+                <strong>Fall Term</strong>
+                <div class="course" draggable="true" id="cpsc331">CPSC 331</div>
+            </div>
+            <div class="term winter" id="winter2">
+                <strong>Winter Term</strong>
+                <div class="course" draggable="true" id="cpsc351">CPSC 351</div>
+            </div>
         </div>
     </div>
 
@@ -67,7 +88,7 @@
 
         // Drag and Drop logic
         const courses = document.querySelectorAll(".course");
-        const years = document.querySelectorAll(".year-content");
+        const terms = document.querySelectorAll(".term");
 
         courses.forEach(course => {
             course.addEventListener("dragstart", (e) => {
@@ -82,22 +103,22 @@
             });
         });
 
-        years.forEach(year => {
-            year.addEventListener("dragover", (e) => {
+        terms.forEach(term => {
+            term.addEventListener("dragover", (e) => {
                 e.preventDefault();
-                year.classList.add("drag-over");
+                term.classList.add("drag-over");
             });
 
-            year.addEventListener("dragleave", () => {
-                year.classList.remove("drag-over");
+            term.addEventListener("dragleave", () => {
+                term.classList.remove("drag-over");
             });
 
-            year.addEventListener("drop", (e) => {
+            term.addEventListener("drop", (e) => {
                 e.preventDefault();
                 const courseId = e.dataTransfer.getData("text/plain");
                 const course = document.getElementById(courseId);
-                year.appendChild(course);
-                year.classList.remove("drag-over");
+                term.appendChild(course);
+                term.classList.remove("drag-over");
             });
         });
     </script>
