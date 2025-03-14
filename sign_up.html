@@ -8,18 +8,20 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/footer.css">
     <title>Login</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("header.html")
-                .then(response => response.text())
-                .then(data => document.getElementById("header-placeholder").innerHTML = data);
+    <header>
+        <div class="header_icons">
+            <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
+            <div class="textBox">
+                <h1>University of Calgary | Degree Navigator</h1>
 
-            fetch("footer.html")
-                .then(response => response.text())
-                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-        });
-    </script>
-</head>
+            </div>
+            <h1>        </h1>
+
+        </div>
+        <nav>
+
+        </nav>
+    </header>
 <body>
 
     <div id="header-placeholder"></div> <!-- Header will load here -->
@@ -30,6 +32,9 @@
         </section>
     </main>
 
-    <div id="footer-placeholder"></div> <!-- Footer will load here -->
+    <footer>
+        <div class="footer_links"></div>
+        <p>&copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan.</p>
+    </footer>
 </body>
 </html>
