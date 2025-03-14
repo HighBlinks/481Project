@@ -14,14 +14,22 @@ header {
     /* padding: 0rem 1.5rem; */
     width: 100%;
 }
+.textBox {
+    margin: 0%
+}
+.smol {text-align: center;
+    font-size: 30px}
+h1 {text-align: center;
+    font-size: 40px;
+    margin: 10px;}
 
 .header_logo {
-    height: 3rem;
+    height: 7rem;
     max-width: 7rem;
     object-fit: contain;
 }
 .profile_img {
-    height: 2rem;
+    height: 6rem;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
