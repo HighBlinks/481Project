@@ -1,0 +1,39 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+.year-header {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid white;
+}
+.year-content {
+    display: none; /* Hidden by default */
+    padding: 10px;
+}
+.term {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px dashed black;
+}
+.fall {
+    background-color: #ffcc99; /* Light Orange for Fall */
+}
+.winter {
+    background-color: #99ccff; /* Light Blue for Winter */
+}
+.course {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background-color: pink;
+    border-radius: 5px;
+    cursor: grab;
+}
+.drag-over {
+    border: 2px dashed yellow;
+}
