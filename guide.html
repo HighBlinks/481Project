@@ -8,6 +8,35 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/footer.css">
     <title>Login</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: #d32f2f; /* UCalgary red */
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+        }
+
+        nav button {
+            background-color: white;
+            color: #d32f2f;
+            border: 2px solid #d32f2f;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #b71c1c; /* Darker red */
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,22 +49,10 @@
             <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img dropbtn">
         </div>
         <nav>
-            <div class="dropdown">
-                <button class="dropdown_btn">Information</button>
-                <div class="dropdown_content">
-                    <a href="">Degree Planner</a>
-                    <a href="register_info.html">Registration Info</a>
-                    <a href="course_search.html">Course Search</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropdown_btn">Profile</button>
-                <div class="dropdown_content flow_right">
-                    <a>User profile</a>
-                    <a>Settings</a>
-                    <a>Logout</a>
-                </div>
-            </div>
+            <a href=""><button>Degree Planner</button></a>
+            <a href="main_menu.html"><button>Main Menu</button></a>
+            <a href="settings.html"><button>Settings</button></a>
+            <a href="logout.html"><button>Logout</button></a>
         </nav>
     </header>
 
