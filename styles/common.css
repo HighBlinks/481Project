@@ -14,7 +14,7 @@ main{
 
 
 
-
+/* make inputs look the same across the site */
 select, input{
     padding: 5px;
     border: 1px solid #ccc;
@@ -25,6 +25,7 @@ select{
     cursor: pointer;
 }
 
+/* a standard button for the site. Easy to change all buttons on the site */
 .regular_button {
     padding: 10px 16px;
     font-size: 1rem;
@@ -37,11 +38,9 @@ select{
     color: white;
     transition: 0.3s ease;
 }
-
 .main button:hover {
     background: #b82036; /* Darker red on hover */
 }
-
 .edit_button{
     position: absolute;
     top: 0.5rem;
@@ -60,7 +59,6 @@ select{
 
     cursor: pointer;
 }
-
 .edit_button:hover {
     background: #b82036; /* Darker red on hover */
     background-image: url('../img/edit.png'); /* out of /styles, into /img */
