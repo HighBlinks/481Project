@@ -12,7 +12,23 @@ main{
     margin: 2rem 1.5rem 2rem;
 }
 
+/* basic panel for consistency */
+.regular_panel{
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 27rem; /* this is a hack and should be changed, main does not have a defined height, so can't do 100% */
+    max-width: 55rem;
 
+    border: solid 1px grey;
+    border-radius: 1rem;
+
+    background-color: #EEE;
+    box-shadow: 0rem 1rem 5rem rgba(0,0,0,0.2);
+}
 
 /* make inputs look the same across the site */
 select, input{
@@ -27,8 +43,11 @@ select{
 
 /* a standard button for the site. Easy to change all buttons on the site */
 .regular_button {
+    display: flex;
     padding: 10px 16px;
     font-size: 1rem;
+    align-items: center;
+    justify-content: center;
     
     border: none;
     border-radius: 6px;
@@ -36,9 +55,10 @@ select{
     cursor: pointer;
     background: #d82b42;
     color: white;
+    text-decoration: none;
     transition: 0.3s ease;
 }
-.main button:hover {
+main button:hover {
     background: #b82036; /* Darker red on hover */
 }
 .edit_button{

@@ -3,32 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/main_menu.css">
-    <link rel="stylesheet" href="styles/footer.css">
     <title>Main menu</title>
-
-    <script defer src="js/load_header_and_footer.js"></script>
+    
+    <link rel="stylesheet" href="styles/header.css">
+    <!-- <link rel="stylesheet" href="styles/footer.css"> -->
+    <!-- <script defer src="js/load_header_and_footer.js"></script> -->
 </head>
 <body>
-    <div id="header-placeholder"></div> <!-- Header will load here -->
+    <header>
+        <div class="header_icons">
+            <a href="index.html"><img src="img/PekoPekoyamaShield.png" alt="U of C logo" class="header_logo"></a>
+            <div class="textBox">
+                <h1>Degree Navigator</h1>
+            </div>
+            <div class="header_sign_in_buttons">
+                <button class="regular_button sign_in_button">Log in</button>
+                <button class="regular_button sign_in_button">Sign up</button>
+            </div>
+        </div>
+        <!-- <nav>
+            <a href="main_menu.html">Main Menu</a>
+            <a href="degree_planner.html">Degree Planner</a>
+            <a href="settings.html">Settings</a>
+            <a href="index.html">Logout</a>
+        </nav> -->
+    </header>
     
     <main>
-        <nav>
-            <a href="saved_plans.html"><button>Saved Plans</button></a>
-            <a href="create_plan.html"><button>Make A New Plan</button></a>
-            <a href="deadlines.html"><button> U of C Registeration Deadlines & Info</button></a>
-            <a href="guide.html"><button>User Guide</button></a>
-        </nav>
+        <div class="regular_panel">
+            <nav>
+                <a href="saved_plans.html"><button>Saved Plans</button></a>
+                <a href="create_plan.html"><button>Make A New Plan</button></a>
+                <a href="deadlines.html"><button> Deadlines & Info</button></a>
+                <a href="guide.html"><button>User Guide</button></a>
+            </nav>
+        </div>
     </main>
 
 
 
     
-    <footer>
+    <!-- <footer>
         <div class="footer_links"></div>
         <p>&copy; 2025: Vincent, Binish, Jullian, Kazi, Nathan.</p>
-    </footer>
+    </footer> -->
 </body>
 </html>

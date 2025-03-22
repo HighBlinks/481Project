@@ -37,22 +37,57 @@ h1 {text-align: center;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
-
 .profile_img:hover {
     transform: scale(1.1);
 }
+.header_sign_in_buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: 1rem;
+}
+.sign_in_button{
+    border: solid 1px #272726;
+}
 
 /* ------------------- DROPDOWN ------------------ */
-nav{
+header nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
+/* shover used if you want to push all menus to one side */
 .shover{
     flex: 1;
 }
-.dropdown {
+
+header nav a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0.5rem;
+
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-left: 1px solid rgba(0,0,0,0.2);
+    font-size: 1rem;
+    text-decoration: none;
+    color: #EEE;
+    background-color: transparent;
+    transition: 0.2s ease-in-out;
+}
+
+header nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* Dropdowns are not being used */
+/* .dropdown {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -88,7 +123,6 @@ nav{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* just for right dropdown so it does not overflow off of the page */
 .flow_right{
     right: 0;
 }
@@ -111,4 +145,4 @@ nav{
 .dropdown:hover .dropdown_content {
     display: block;
     opacity: 1;
-}
+} */
