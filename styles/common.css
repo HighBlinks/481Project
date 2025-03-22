@@ -1,13 +1,19 @@
+
+/* The main content should push the footer to at least the bottom of the screen */
+/* this is why 'body' has flex, and 'main' has a flex of 1 */
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;  /* default HTML gives a small border, separating the content from the edge with an ugly band */
 }
-.main{
+main{
     flex: 1; /* push the footer via empty space to bottom, if needed */
     margin: 2rem 1.5rem 2rem;
 }
+
+
+
 
 select, input{
     padding: 5px;
