@@ -15,63 +15,65 @@
     <div id="header-placeholder"></div> <!-- Header will load here -->
     
     <main>
-        <h2>Create new plan:</h2>
-        <div id="input_wrapper">
-            <div id="input_panel">
-                <label for="name">Name the plan: </label>
-                <!-- Just a few hard-coded options -->
-                <input type="text" name="name" id="name">
-                <label for="major">Major: </label>
-                <!-- Just a few hard-coded options -->
-                <select name="major" id="major">
-                    <option value="ANTH">Anthropology</option>
-                    <option value="CPSC">Computer Scince</option>
-                    <option value="ENGL">English</option>
-                    <option value="DEST">Global Development Studies</option>
-                    <option value="ITAL">Italian</option>
-                    <option value="BKIN">Kinesiology</option>
-                    <option value="MATH">Math!</option>
-                </select>
-                <!-- Just a few hard-coded options -->
-                <label for="concentration">Concentration: </label>
-                <select name="concentration" id="concentration">
-                    <option value="game_dev">Computer Game Development</option>
-                    <option value="graphics">Computer Graphics</option>
-                    <option value="hci">Human Computer Interaction</option>
-                    <option value="info_sec">Information Security</option>
-                    <option value="networks">Networks and Distributed Computing</option>
-                    <option value="computation">Scientific Computation</option>
-                    <option value="software">Software Engineering</option>
-                    <option value="theoretical">Theoretical Computer Science</option>
-                    <option value="visualization">Visualization and Analytics</option>
-                </select>
-                <!-- Just a few hard-coded options -->
-                <label for="minor">Minor: </label>
-                <select name="minor" id="minor">
-                    <option value="ANTH">Anthropology</option>
-                    <option value="CPSC">Computer Scince</option>
-                    <option value="ENGL">English</option>
-                    <option value="DEST">Global Development Studies</option>
-                    <option value="ITAL">Italian</option>
-                    <option value="BKIN">Kinesiology</option>
-                    <option value="MATH">Math!</option>
-                </select>
-                
-                <label for="semesters">Taking spring/ summer courses: </label>
-                <select name="semesters" id="semesters">
-                    <option value="none">None</option>
-                    <option value="spring">Spring</option>
-                    <option value="summer">Summer</option>
-                    <option value="both">Both</option>
-                </select>
-                <label for="num_years">How many years do want to complete your degree in: </label>
-                <select name="semesters" id="semesters">
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                </select>
+        <div class="regular_panel">
+            <h2>Create new plan:</h2>
+            <div id="input_wrapper">
+                <div id="input_panel">
+                    <label for="name">Name the plan: </label>
+                    <!-- Just a few hard-coded options -->
+                    <input type="text" name="name" id="name">
+                    <label for="major">Major: </label>
+                    <!-- Just a few hard-coded options -->
+                    <select name="major" id="major">
+                        <option value="ANTH">Anthropology</option>
+                        <option value="CPSC">Computer Scince</option>
+                        <option value="ENGL">English</option>
+                        <option value="DEST">Global Development Studies</option>
+                        <option value="ITAL">Italian</option>
+                        <option value="BKIN">Kinesiology</option>
+                        <option value="MATH">Math!</option>
+                    </select>
+                    <!-- Just a few hard-coded options -->
+                    <label for="concentration">Concentration: </label>
+                    <select name="concentration" id="concentration">
+                        <option value="game_dev">Computer Game Development</option>
+                        <option value="graphics">Computer Graphics</option>
+                        <option value="hci">Human Computer Interaction</option>
+                        <option value="info_sec">Information Security</option>
+                        <option value="networks">Networks and Distributed Computing</option>
+                        <option value="computation">Scientific Computation</option>
+                        <option value="software">Software Engineering</option>
+                        <option value="theoretical">Theoretical Computer Science</option>
+                        <option value="visualization">Visualization and Analytics</option>
+                    </select>
+                    <!-- Just a few hard-coded options -->
+                    <label for="minor">Minor: </label>
+                    <select name="minor" id="minor">
+                        <option value="ANTH">Anthropology</option>
+                        <option value="CPSC">Computer Scince</option>
+                        <option value="ENGL">English</option>
+                        <option value="DEST">Global Development Studies</option>
+                        <option value="ITAL">Italian</option>
+                        <option value="BKIN">Kinesiology</option>
+                        <option value="MATH">Math!</option>
+                    </select>
+                    
+                    <label for="semesters">Taking spring/ summer courses: </label>
+                    <select name="semesters" id="semesters">
+                        <option value="none">None</option>
+                        <option value="spring">Spring</option>
+                        <option value="summer">Summer</option>
+                        <option value="both">Both</option>
+                    </select>
+                    <label for="num_years">How many years do want to complete your degree in: </label>
+                    <select name="semesters" id="semesters">
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <a href="degree_planner.html" class="no_decoration"><button class="regular_button">Submit</button></a>
             </div>
-            <a href="degree_planner.html"><button>Submit</button></a>
         </div>
     </main>
     <div id="footer-placeholder"></div> <!-- Footer will load here -->
