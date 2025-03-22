@@ -29,10 +29,12 @@ h1 {text-align: center;
     max-width: 7rem;
     object-fit: contain;
 }
+header .profile_img{
+    margin-right: 2em;
+}
 .profile_img {
     height: 6rem;
     aspect-ratio: 1/1;
-    margin-right: 2em;
     object-fit: cover;
     border-radius: 50%;
     cursor: pointer;
