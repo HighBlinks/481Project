@@ -4,20 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/settings.css">
+    <link rel="stylesheet" href="styles/main_menu.css">
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/footer.css">
     <title>Settings</title>
-
     <script defer src="js/load_header_and_footer.js"></script>
 </head>
 <body>
     <div id="header-placeholder"></div> <!-- Header will load here -->
 
-    <main>
-        <section>
-            <h2>Add static buttons like font size, change username, profile pic etc.</h2>
+    <main class="settings-container">
+        <!-- Left Column: Profile Section -->
+        <section class="profile-section">
+            <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img">
+            <div class="setting-item">
+                <label for="profile-pic">Update Profile Picture:</label>
+                <input type="file" id="profile-pic" accept="image/*">
+            </div>
+            
+            <div class="setting-item">
+                <label for="username"> Update Username: </label>
+                <input type="text" id="username" name="username">
+            </div>
 
+            <div class="setting-item">
+                <label for="password">Update Password: </label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="setting-item">
+                <button class ="font-size-btn">Save Changes</button>
+            </div>
+
+        </section>
+
+        <!-- Right Column: Settings Content -->
+        <section class="settings-content">
+
+            <h3>Other Settings</h3>
+            <div class="setting-item">
+                <label>Font Size:</label>
+                <button class="font-size-btn" data-size="small">Small</button>
+                <button class="font-size-btn" data-size="medium">Medium</button>
+                <button class="font-size-btn" data-size="large">Large</button>
+            </div>
+
+            <div class="setting-item">
+                <label>Security Settings:</label>
+                <button>Enable Two-Factor Authentication</button>
+                <button>Manage Devices</button>
+            </div>
         </section>
     </main>
 

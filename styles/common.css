@@ -59,7 +59,7 @@ select{
     transition: 0.3s ease;
 }
 .no_decoration{
-    text-decoration: none ;
+    text-decoration: none;
 }
 main button:hover {
     background: #b82036; /* Darker red on hover */
