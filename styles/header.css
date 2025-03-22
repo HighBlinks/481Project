@@ -32,13 +32,16 @@ h1 {text-align: center;
 .profile_img {
     height: 6rem;
     aspect-ratio: 1/1;
+    margin-right: 2em;
     object-fit: cover;
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    background-color: #d82b42;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    transition: ease-in-out;
 }
 .profile_img:hover {
-    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .header_sign_in_buttons{
     display: flex;
