@@ -45,15 +45,27 @@ header .profile_img{
 .profile_img:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.header_sign_in_buttons{
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding-right: 1rem;
-}
+
 .sign_in_button{
     border: solid 1px #272726;
 }
+
+.header_sign_in_buttons {
+    display: flex;
+    gap: 10px; 
+    align-items: center; 
+}
+.header_sign_in_buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end; /* aligns buttons to the right */
+}
+
+
+
+
+
 
 /* ------------------- DROPDOWN ------------------ */
 header nav{
@@ -88,66 +100,3 @@ header nav a:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-/* Dropdowns are not being used */
-/* .dropdown {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-}
-
-.dropdown_btn {
-    height: 100%;
-    padding: 0.5rem;
-    border: none;
-    font-size: 1rem;
-    background-color: transparent;
-    color: #EEE;
-    transition: 0.2s ease-in-out;
-}
-
-.dropdown_btn:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.dropdown_content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    min-width: 100%;
-    z-index: 10;
-    
-    border-radius: 0.5em;
-    cursor: pointer;
-    overflow: hidden;
-    background-color: #EEE;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.flow_right{
-    right: 0;
-}
-
-.dropdown_content a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    white-space: nowrap;
-    
-    background-color: #EEE;
-    color: #333;
-    transition: 0.2s ease-in-out;
-}
-
-.dropdown_content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown_content {
-    display: block;
-    opacity: 1;
-} */

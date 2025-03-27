@@ -1,6 +1,7 @@
 body{
     background-color: #EEE;
 }
+
 main nav {
     display: flex;
     flex-direction: column;
