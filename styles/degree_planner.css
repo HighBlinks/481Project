@@ -25,6 +25,12 @@ body {
 .winter {
     background-color: #99ccff; /* Light Blue for Winter */
 }
+.spring {
+    background-color: #99ff99; /* Light Green for Spring */
+}
+.summer {
+    background-color: #ffcc66; /* Light Yellow for Summer */
+}
 .course {
     display: inline-block;
     padding: 10px;
