@@ -57,17 +57,55 @@ document.addEventListener("DOMContentLoaded", function () {
         if (item.tagName.toLowerCase() === "li") {
             const courseCode = item.textContent.split(" - ")[0].trim();
             const level = parseInt(courseCode.match(/\d+/)[0]);
+            const term = item.textContent.match(/(Fall|Winter|Spring|Summer)/i);
 
             // Where the course should initially appear
             let targetId = "fall4"; // Default to Year 4
-            if (level >= 200 && level < 300) {
-                targetId = "fall1";
-            } else if (level >= 300 && level < 400) {
-                targetId = "fall2";
-            } else if (level >= 400 && level < 500) {
-                targetId = "fall3";
-            }
+            
 
+            if (level >= 200 && level < 300) {
+                if (term[0] === "Fall") {
+                    targetId = "fall1";
+                } else if (term[0] === "Winter") {
+                    targetId = "winter1";
+                } else if (term[0] === "Spring") {
+                    targetId = "spring1";
+                } else if (term[0] === "Summer") {
+                    targetId = "summer1";
+                }
+
+            } else if (level >= 300 && level < 400) {
+                if (term[0] === "Fall") {
+                    targetId = "fall2";
+                } else if (term[0] === "Winter") {
+                    targetId = "winter2";
+                } else if (term[0] === "Spring") {
+                    targetId = "spring2";
+                } else if (term[0] === "Summer") {
+                    targetId = "summer2";
+                }
+
+            } else if (level >= 400 && level < 500) {
+                if (term[0] === "Fall") {
+                    targetId = "fall3";
+                } else if (term[0] === "Winter") {
+                    targetId = "winter3";
+                } else if (term[0] === "Spring") {
+                    targetId = "spring3";
+                } else if (term[0] === "Summer") {
+                    targetId = "summer3";
+                }
+            } else if (level >= 500) {
+                if (term[0] === "Fall") {
+                    targetId = "fall4";
+                } else if (term[0] === "Winter") {
+                    targetId = "winter4";
+                } else if (term[0] === "Spring") {
+                    targetId = "spring4";
+                } else if (term[0] === "Summer") {
+                    targetId = "summer4";
+                }
+            }
             // Check if the course is already added to the target term
             const targetTerm = document.getElementById(targetId);
 
