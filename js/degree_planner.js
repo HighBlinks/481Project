@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const courseCode = item.textContent.split(" - ")[0].trim();
             const level = parseInt(courseCode.match(/\d+/)[0]);
 
-            // Where the course should initially appear 
+            // Where the course should initially appear
             let targetId = "fall4"; // Default to Year 4
             if (level >= 200 && level < 300) {
                 targetId = "fall1";
@@ -66,6 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 targetId = "fall2";
             } else if (level >= 400 && level < 500) {
                 targetId = "fall3";
+            }
+
+            // Check if the course is already added to the target term
+            const targetTerm = document.getElementById(targetId);
+
+            // Check if a course with the same code is already in the term
+            const existingCourse = Array.from(targetTerm.children).find(course => course.textContent.trim() === courseCode);
+            if (existingCourse) {
+                return; // If course is already added, do nothing
             }
 
             // Create draggable course div
@@ -90,13 +99,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 courseDiv.style.display = "inline-block";
             });
 
-    
-            const termDiv = document.getElementById(targetId);
-            termDiv.appendChild(courseDiv); 
-
+            // Append the course to the target term
+            targetTerm.appendChild(courseDiv);
         }
     });
 });
+
+
 
 
 
