@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const courseElements = document.querySelectorAll('.course');
   
     courseElements.forEach(course => {
-      if (saved === 'true') {
-        course.classList.add('completed');
-      }
-  
       // Toggle completed state on click
       course.addEventListener('click', () => {
         course.classList.toggle('completed');
