@@ -41,8 +41,7 @@ body {
 }
 .drag-over {
     border: 2px dashed yellow;
-}
-.progress-container {
+}.progress-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,23 +64,35 @@ body {
     font-weight: bold;
 }
 
-.progress-bar {
+.progress-bar-wrapper {
+    display: flex;
+    align-items: center;
     width: 100%;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    flex: 1;
     height: 20px;
     background: #ddd;
     border-radius: 10px;
-    margin-top: 10px;
     overflow: hidden;
 }
 
 .progress-fill {
     height: 100%;
     background: #4caf50; /* Green progress bar */
-    text-align: right;
-    padding-right: 10px;
     color: white;
     font-weight: bold;
     line-height: 20px;
     border-radius: 10px;
     transition: width 0.5s ease-in-out;
+}
+
+.progress-percent {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #333;
+    min-width: 40px;
+    text-align: right;
 }
