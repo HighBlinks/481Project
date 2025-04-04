@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const courseElements = document.querySelectorAll('.course');
   
     courseElements.forEach(course => {
-      // Restore completed state from localStorage
-      const saved = localStorage.getItem(course.id);
       if (saved === 'true') {
         course.classList.add('completed');
       }
@@ -20,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // Toggle completed state on click
       course.addEventListener('click', () => {
         course.classList.toggle('completed');
-        localStorage.setItem(course.id, course.classList.contains('completed'));
       });
     });
   });
