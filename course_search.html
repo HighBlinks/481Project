@@ -13,7 +13,7 @@
         <!-- then changes could happen in once place -->
         <div class="header_icons">
             <a href="index.html"><img src="img/Logo_Horz_Colour.png" alt="U of C logo" class="header_logo"></a>
-            <img src="img/avatar.png" alt="User profile pic" class="profile_img dropbtn">
+            <img src="img/HmphJud.png" alt="User profile pic" class="profile_img dropbtn">
         </div>
         <nav>
             <div class="dropdown">
@@ -52,7 +52,40 @@
     <div id="main">
         <h2>Search Bar</h2>
         <input type="text" placeholder="Search by Course Code..">
-        <a href="saodfij">Filters:</a>
+        </br></br><a href="">Filters:</a>
+        <div class="pop-up">
+            <label for="faculty">Faculty:</label>
+            <select id="faculty">
+                <option>Software Engineering</option>
+                <option>Computer Science</option>
+                <option>Actuarial Science</option>
+                <option>Biochemistry</option>
+            </select>
+            <br><br>
+            <label for="course-level">Course Level:</label>
+            <input type="range" id="course-level" min="100" max="400" step="100" value="100" oninput="document.getElementById('level-value').innerText = this.value">
+            <span id="level-value">100</span>
+            <br><br>
+            <div style="display: flex; align-items: center;">
+                <div>
+                    <label>Term:</label>
+                    <div class="term-buttons">
+                        <button>Fall</button>
+                        <button>Winter</button>
+                        <button>Spring</button>
+                        <button>Summer</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <label for="difficulty">Difficulty:</label> 
+            <input type="range" id="difficulty" min="1" max="3" step="1" value="1">
+        </div>
+        <div>
+            <!-- <button class="fake" style = "10px"><img src="img/House.png" style = "10px"></img></button>
+            <button class="fake"><img src="img/Calendar.png" style = "10px"></img></button>
+            <button class="fake"><img src="img/Gear.png" style = "10px"></img></button> -->
+        </div>
     </div>
     <div id="playground" class="container"><img src="img/leBackground.png"></img>
         <h3>Year 1</h3>

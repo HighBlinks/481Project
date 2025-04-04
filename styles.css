@@ -54,6 +54,20 @@ body {
     border-color: #DD0000;
     border-radius: 10px;
 }
+.pop-up {
+    max-width: 500px;
+    margin: auto;
+}
+
+.term-buttons button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    accent-color: red; 
+}
 
 .openbtn:hover {
     background-color: #B00000;

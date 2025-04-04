@@ -21,7 +21,7 @@ header {
     object-fit: contain;
 }
 .profile_img {
-    height: 7rem;
+    height: 6rem;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
