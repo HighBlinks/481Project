@@ -6,7 +6,15 @@ document.querySelectorAll(".year-header").forEach(header => {
         content.style.display = content.style.display === "block" ? "none" : "block";
     });
 });
-
+function showPopup(message) {
+    const popup = document.getElementById("popup");
+    popup.textContent = message;
+    popup.classList.remove("hidden");
+  
+    setTimeout(() => {
+      popup.classList.add("hidden");
+    }, 3000); // hide after 3 seconds
+  }
 // Drag and Drop logic
 const courses = document.querySelectorAll(".course");
 const terms = document.querySelectorAll(".term");
@@ -112,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Check if a course with the same code is already in the term
             const existingCourse = Array.from(targetTerm.children).find(course => course.textContent.trim() === courseCode);
             if (existingCourse) {
+                showPopup("Error: Course already added. Please select another course.");
                 return; // If course is already added, do nothing
             }
 
