@@ -6,18 +6,43 @@ document.querySelectorAll(".year-header").forEach(header => {
         content.style.display = content.style.display === "block" ? "none" : "block";
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    // Handle course completion toggle & delete button clicks using event delegation
+    document.body.addEventListener("click", (event) => {
+        const target = event.target;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const courseElements = document.querySelectorAll('.course');
-  
-    courseElements.forEach(course => {
-      // Toggle completed state on click
-      course.addEventListener('click', () => {
-        course.classList.toggle('completed');
-      });
+        // Toggle "completed" class when clicking on a course
+        if (target.classList.contains("course")) {
+            target.classList.toggle("completed");
+        }
+
+        // Remove course when clicking the delete button
+        if (target.classList.contains("delete-btn")) {
+            event.stopPropagation(); // Prevent it from triggering the course click event
+            target.parentElement.remove();
+        }
     });
-  });
-  
+
+    // Attach delete button dynamically to new courses
+    function addDeleteButtonToCourse(course) {
+        if (!course.querySelector(".delete-btn")) {
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "X";
+            deleteButton.classList.add("delete-btn");
+            course.appendChild(deleteButton);
+        }
+    }
+
+    // Observe dynamically added courses and add delete buttons
+    const observer = new MutationObserver(() => {
+        document.querySelectorAll(".course").forEach(course => {
+            addDeleteButtonToCourse(course);
+        });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+
 function showPopup(message) {
     const popup = document.getElementById("popup");
     popup.textContent = message;
