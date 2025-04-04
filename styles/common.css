@@ -106,4 +106,23 @@ main button:hover {
   .hidden {
     display: none;
   }
+  .course {
+    position: relative;
+    padding-right: 24px; /* make room for the checkmark */
+    transition: background-color 0.3s;
+  }
+  
+  .course.completed {
+    background-color: #d0f0c0; /* light green */
+  }
+  
+  .course.completed::after {
+    content: "✔";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1b5e20;
+    font-weight: bold;
+  }
   

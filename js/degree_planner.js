@@ -6,6 +6,25 @@ document.querySelectorAll(".year-header").forEach(header => {
         content.style.display = content.style.display === "block" ? "none" : "block";
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const courseElements = document.querySelectorAll('.course');
+  
+    courseElements.forEach(course => {
+      // Restore completed state from localStorage
+      const saved = localStorage.getItem(course.id);
+      if (saved === 'true') {
+        course.classList.add('completed');
+      }
+  
+      // Toggle completed state on click
+      course.addEventListener('click', () => {
+        course.classList.toggle('completed');
+        localStorage.setItem(course.id, course.classList.contains('completed'));
+      });
+    });
+  });
+  
 function showPopup(message) {
     const popup = document.getElementById("popup");
     popup.textContent = message;
