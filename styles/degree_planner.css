@@ -96,3 +96,24 @@ body {
     min-width: 40px;
     text-align: right;
 }
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.save-icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+}
+
+.save-icon:hover {
+    filter: brightness(85%);
+}
