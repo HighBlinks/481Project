@@ -105,21 +105,31 @@
     border: 2px dashed black;
 }
 
+/* Modern Professional Palette */
+.term {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 0 4px 4px 0;
+}
+
 .fall {
-    background-color: #f5efe6; /* Warm gray */
-    border-left: 4px solid #c4a484;
+    background-color: #fff3e6; 
+    border-left: 4px solid #e67e22; 
 }
+
 .winter {
-    background-color: #f0f3f5; /* Cool gray */
-    border-left: 4px solid #9eb3c2;
+    background-color: #ebf5fb; 
+    border-left: 4px solid #3498db; 
 }
+
 .spring {
-    background-color: #f0f5ea; /* Green-gray */
-    border-left: 4px solid #b5c2a9;
+    background-color: #e8f8f5; 
+    border-left: 4px solid #1abc9c;
 }
+
 .summer {
-    background-color: #f5f2e6; /* Yellow-gray */
-    border-left: 4px solid #d1c4a3;
+    background-color: #fef9e7; 
+    border-left: 4px solid #f1c40f; 
 }
 
 .sidebar {
