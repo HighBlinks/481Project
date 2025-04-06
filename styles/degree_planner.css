@@ -104,24 +104,23 @@
     padding: 10px;
     border: 2px dashed black;
 }
+
 .fall {
-    background-color: #ffcc99; /* Light Orange for Fall */
+    background-color: #f5efe6; /* Warm gray */
+    border-left: 4px solid #c4a484;
 }
 .winter {
-    background-color: #99ccff; /* Light Blue for Winter */
+    background-color: #f0f3f5; /* Cool gray */
+    border-left: 4px solid #9eb3c2;
 }
 .spring {
-    background-color: #99ff99; /* Light Green for Spring */
+    background-color: #f0f5ea; /* Green-gray */
+    border-left: 4px solid #b5c2a9;
 }
 .summer {
-    background-color: #ffcc66; /* Light Yellow for Summer */
+    background-color: #f5f2e6; /* Yellow-gray */
+    border-left: 4px solid #d1c4a3;
 }
-
-
-.drag-over {
-    border: 2px dashed yellow;
-}
-
 
 .sidebar {
     width: 30%;
