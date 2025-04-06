@@ -1,0 +1,64 @@
+
+
+.Ucalimg {
+    border: 5px solid black;
+    width: 70%;
+    object-fit: contain;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.main h1 {text-align: center;
+    font-size: 50px;
+    color:black
+}
+
+.dLSection {
+    text-align: center;
+    height: auto;
+    background-color:lightgray;
+    padding-left:50px;
+    padding-right:50px;
+    padding-bottom:50px;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.linkSection {
+    text-align: center;
+    height: auto;
+    padding-left:50px;
+    padding-right:50px;
+    padding-bottom:50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    font-size: 40px
+}
+
+.p1 {text-align: center;
+    border: 15px solid green;
+    background-color:white;
+    padding: 10px;
+    margin-top: 0px;
+    font-size: 40px}
+
+.p2 {text-align: center;
+    border: 15px solid red;
+    background-color:white;
+    padding: 10px;
+    font-size: 40px}
+
+.myU {text-align: center;
+    background-color:white;
+    font-size: 40px}
+
+.smol {text-align: center;
+    font-size: 30px}
