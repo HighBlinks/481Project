@@ -1,5 +1,23 @@
-/* ----------------------- class progression and view (large right section) ----------------------- */
+.content {
+    flex-grow: 1; /* Allows the content to expand between header and footer */
+    display: flex;
+    background-color: #f8f8f8;
+}
 
+/* ----------------------- main content (large right section) ----------------------- */
+.main-content {
+    flex-grow: 1;
+    margin-left: 0%;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* --------------- title --------------- */
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 .save-icon {
     width: 24px;
     height: 24px;
@@ -15,7 +33,7 @@
     filter: brightness(85%);
 }
 
-
+/* --------------- progress bar --------------- */
 .progress-container {
     display: flex;
     flex-direction: column;
@@ -67,6 +85,7 @@
     text-align: right;
 }
 
+/* --------------- years/ terms/ course tiles --------------- */
 .year-header {
     background-color: red;
     color: white;
@@ -97,6 +116,8 @@
 .summer {
     background-color: #ffcc66; /* Light Yellow for Summer */
 }
+
+/* --------------- title --------------- */
 .course {
     display: inline-block;
     padding: 10px;
@@ -108,8 +129,72 @@
 .drag-over {
     border: 2px dashed yellow;
 }
-.title-with-icon {
+
+
+.sidebar {
+    width: 30%;
+    max-width: 300px;
+    border-right: 2px solid #ddd;
+    padding: 25px;
+    overflow-y: auto;
+    transition: transform 0.3s ease-in-out;
+    flex-grow: 1; /* Takes remaining space between header and footer */
+    position: relative;
+}
+.sidebar button {
+    position: absolute;
+    top: 10px;
+    right: -25px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 0 5px 5px 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar li {
+    padding: 5px;
+    background-color: #e6e6e6;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background-color: #ddd;
+}
+
+/* ----------------------- main content (large right section) ----------------------- */
+.sidebar_labels{
     display: flex;
+}
+.sidebar_labels > label{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+    border: solid black 1px;
+    background-color: #cacaca;
+}
+.sidebar_labels > label:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.label_checked{
+    background-color: rgba(0,0,0,0) !important;
+}
+.sidebar input[type="radio"]{
+    display: none; /* get rid of ugly radio circles */
+}
+.radio_box{
+    display: none; /* default hidden (only checked option's can be seen) */
+}
+.sidebar input[type="radio"]:checked + .radio_box{
+    display: inline;
 }
