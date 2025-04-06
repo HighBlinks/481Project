@@ -1,9 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
+/* ----------------------- class progression and view (large right section) ----------------------- */
+
+.save-icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+}
+.save-icon:hover {
+    filter: brightness(85%);
 }
 
 
-/* ----------------------- class progression and view (large right section) ----------------------- */
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.progress-bar-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.progress-bar {
+    flex: 1;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    background: #4caf50; /* Green progress bar */
+    color: white;
+    font-weight: bold;
+    line-height: 20px;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+.progress-percent {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #333;
+    min-width: 40px;
+    text-align: right;
+}
 
 .year-header {
     background-color: red;
@@ -45,79 +107,9 @@ body {
 }
 .drag-over {
     border: 2px dashed yellow;
-}.progress-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    width: 100%;
-    max-width: 600px;
-    margin: 10px auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.progress-header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 10px;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.progress-bar-wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.progress-bar {
-    flex: 1;
-    height: 20px;
-    background: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    background: #4caf50; /* Green progress bar */
-    color: white;
-    font-weight: bold;
-    line-height: 20px;
-    border-radius: 10px;
-    transition: width 0.5s ease-in-out;
-}
-
-.progress-percent {
-    margin-left: 10px;
-    font-weight: bold;
-    color: #333;
-    min-width: 40px;
-    text-align: right;
 }
 .title-with-icon {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
-
-.save-icon {
-    width: 24px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    background-color: transparent;
-}
-
-.save-icon:hover {
-    filter: brightness(85%);
 }
