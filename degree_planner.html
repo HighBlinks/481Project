@@ -17,7 +17,7 @@
     <script defer src="js/sidebar.js"></script>
     <script defer src="js/main-content.js"></script>
     <script defer src="js/selectedSemesters.js"></script>
-    <script defer src="js/sidebar_label_styles.js"></script>
+    <script defer src="js/target_labels.js"></script>
 </head>
 <body>
     <div id="header-placeholder"></div> <!-- Header will load here -->
@@ -32,10 +32,10 @@
                 <!-- for="" lets the label be far away from the actual input -->
                 <!-- input is kept near the content it modifies in order to use -->
                 <!-- the '+' next sibling selector in the CSS -->
-                <label for="degree_requirements" class="label_checked">Course Info</label> 
-                <label for="degree_info">Degree Info</label>
-                <label for="course_search">Search</label>
-                <label for="help">?</label>
+                <label class="target_label" for="degree_requirements" class="label_checked">Course Info</label> 
+                <label class="target_label" for="degree_info">Degree Info</label>
+                <label class="target_label" for="course_search">Search</label>
+                <label class="target_label" for="help">?</label>
             </div>
             
             <input type="radio" name="sidebar" id="degree_requirements" checked>

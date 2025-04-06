@@ -1,6 +1,6 @@
 
-const sidebar_radio_inputs = document.querySelectorAll('.sidebar_labels > label')
-const sidebar_radio_labels = document.querySelectorAll('.sidebar_labels > label')
+const sidebar_radio_inputs = document.querySelectorAll('.target_label')
+const sidebar_radio_labels = document.querySelectorAll('.target_label')
 
 sidebar_radio_inputs.forEach(element => {
     element.addEventListener('click', reselect)
