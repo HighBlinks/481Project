@@ -11,4 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("login_header.html")
         .then(response => response.text())
         .then(data => document.getElementById("header-login-placeholder").innerHTML = data);
+    fetch("header_main_menu.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header-main-menu-placeholder").innerHTML = data);
 });
