@@ -64,10 +64,7 @@ header .profile_img{
 
 
 
-
-
-
-/* ------------------- DROPDOWN ------------------ */
+/* ------------------- nav ------------------ */
 header nav{
     display: flex;
     align-items: center;
@@ -98,5 +95,10 @@ header nav a {
 
 header nav a:hover {
     background-color: rgba(0, 0, 0, 0.1);
+}
+.point_to_none{
+    content: "";
+    pointer-events: none;
+    color: rgba(0,0,0,0);
 }
 
