@@ -75,15 +75,16 @@ function showCourseInfo(courseCode) {
     // Populate the course info
     const items = courseInfoBox.querySelectorAll('li');
     if (courseData) {
-        items[0].innerHTML = `<strong>Prerequisites:</strong> ${courseData.Preq || "None"}`;
-        items[1].innerHTML = `<strong>Antirequisites:</strong> ${courseData.AntiReq || "None"}`;
-        items[2].innerHTML = `<strong>Difficulty:</strong> ${"💀".repeat(parseInt(courseData.difficulty)) || "Not rated"}`;
-        items[3].innerHTML = `<strong>Offered:</strong> ${courseData.term || "Unknown"}`;
+        items[0].innerHTML = `<strong>COURSE:</strong> ${courseData.code || "None"}`;
+        items[1].innerHTML = `<strong>Prerequisites:</strong> ${courseData.Preq || "None"}`;
+        items[2].innerHTML = `<strong>Antirequisites:</strong> ${courseData.AntiReq || "None"}`;
+        items[3].innerHTML = `<strong>Difficulty:</strong> ${"💀".repeat(parseInt(courseData.difficulty)) || "Not rated"}`;
+        items[4].innerHTML = `<strong>Offered:</strong> ${courseData.term || "Unknown"}`;
     } else {
-        items[0].innerHTML = "<strong>Prerequisites:</strong> Data not available";
-        items[1].innerHTML = "<strong>Antirequisites:</strong> Data not available";
-        items[2].innerHTML = "<strong>Difficulty:</strong> Data not available";
-        items[3].innerHTML = "<strong>Offered:</strong> Data not available";
+        items[1].innerHTML = "<strong>Prerequisites:</strong> Data not available";
+        items[2].innerHTML = "<strong>Antirequisites:</strong> Data not available";
+        items[3].innerHTML = "<strong>Difficulty:</strong> Data not available";
+        items[4].innerHTML = "<strong>Offered:</strong> Data not available";
     }
 }
 
