@@ -3,7 +3,7 @@
     max-width: 300px;
     background-color: #f8f8f8;
     border-right: 2px solid #ddd;
-    padding: 15px;
+    padding: 25px;
     overflow-y: auto;
     transition: transform 0.3s ease-in-out;
     flex-grow: 1; /* Takes remaining space between header and footer */
@@ -47,4 +47,34 @@ li {
 
 li:hover {
     background-color: #ddd;
+}
+
+
+.sidebar_labels{
+    display: flex;
+}
+.sidebar_labels > label{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem;
+    border-radius: 0.25rem 0.25rem 0rem 0rem;
+    border: solid black 1px;
+    background-color: #b0b0b0;
+}
+.label_checked{
+    background-color: rgba(0,0,0,0) !important;
+}
+.sidebar_labels > label:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.sidebar input[type="radio"]{
+    display: none; /* get rid of ugly radio circles */
+}
+.radio_box{
+    display: none;
+}
+.sidebar input[type="radio"]:checked + .radio_box{
+    display: inline;
 }
