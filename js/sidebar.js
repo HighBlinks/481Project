@@ -54,10 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // ARKY courses
     { code: "ARKY 201", level: 200, term: "Fall", difficulty: "2", Preq: "", AntiReq: "" },
     { code: "ARKY 325", level: 300, term: "Winter", difficulty: "3", Preq: "ARKY 201 or consent of the Department", AntiReq: "" },
-    { code: "ARKY 415", level: 400, term: "Spring", difficulty: "4", Preq: "ARKY 325", AntiReq: "" }
+    { code: "ARKY 415", level: 400, term: "Spring", difficulty: "4", Preq: "ARKY 325", AntiReq: "" },
+
+    //MATH
+    { code: "MATH 249", level: 200, term: "Fall", difficulty: "3", Preq: "Mathematics 30-1 or 30-2", AntiReq: "Credit for both Mathematics 249 and any of 265, 275, 281 or Applied Mathematics 217 will not be allowed." },
+    { code: "MATH 211", level: 200, term: "Winter", difficulty: "3", Preq: "One of Mathematics 249, 265, 275 or 281", AntiReq: "Credit for both Mathematics 211 and 213 will not be allowed." },
+    { code: "PHIL 279", level: 200, term: "Fall", difficulty: "2", Preq: "", AntiReq: "Credit for both Philosophy 279 and 377 will not be allowed." },
+    { code: "PHIL 312", level: 300, term: "Winter", difficulty: "3", Preq: "Philosophy 201 or consent of the Department", AntiReq: "" } 
 ];
 
-
+window.courseDatabase = courses;
     // Function to filter and display courses
     function filterCourses() {
         const searchValue = searchInput.value.toUpperCase();

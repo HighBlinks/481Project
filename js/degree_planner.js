@@ -33,10 +33,66 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+// degree_planner.js
+
+// Modified addInfoButtonToCourse function
+function addInfoButtonToCourse(course) {
+    if (!course.querySelector(".info-btn")) {
+        const infoButton = document.createElement("button");
+        infoButton.textContent = "i";
+        infoButton.classList.add("info-btn");
+        infoButton.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const courseCode = course.dataset.courseCode || course.textContent.trim();
+            showCourseInfo(courseCode);
+        });
+        course.appendChild(infoButton);
+    }
+}
+
+// Enhanced showCourseInfo function
+function showCourseInfo(courseCode) {
+
+    // Find the course (case insensitive and space insensitive)
+    const courseData = window.courseDatabase.find(course => 
+        course.code.toUpperCase().replace(/\s/g, "") === 
+        courseCode.toUpperCase().replace(/\s/g, "")
+    );
+
+    // Get Course Info sidebar elements
+    const courseInfoRadio = document.getElementById("degree_requirements");
+    const courseInfoBox = courseInfoRadio.nextElementSibling;
+    
+    // Activate the Course Info tab
+    courseInfoRadio.checked = true;
+    
+    // Update active tab styling
+    document.querySelectorAll('.sidebar_labels label').forEach(label => {
+        label.classList.remove('label_checked');
+    });
+    document.querySelector('label[for="degree_requirements"]').classList.add('label_checked');
+    
+    // Populate the course info
+    const items = courseInfoBox.querySelectorAll('li');
+    if (courseData) {
+        items[0].innerHTML = `<strong>Prerequisites:</strong> ${courseData.Preq || "None"}`;
+        items[1].innerHTML = `<strong>Antirequisites:</strong> ${courseData.AntiReq || "None"}`;
+        items[2].innerHTML = `<strong>Difficulty:</strong> ${"💀".repeat(parseInt(courseData.difficulty)) || "Not rated"}`;
+        items[3].innerHTML = `<strong>Offered:</strong> ${courseData.term || "Unknown"}`;
+    } else {
+        items[0].innerHTML = "<strong>Prerequisites:</strong> Data not available";
+        items[1].innerHTML = "<strong>Antirequisites:</strong> Data not available";
+        items[2].innerHTML = "<strong>Difficulty:</strong> Data not available";
+        items[3].innerHTML = "<strong>Offered:</strong> Data not available";
+    }
+}
+
+
     // Observe dynamically added courses and add delete buttons
     const observer = new MutationObserver(() => {
         document.querySelectorAll(".course").forEach(course => {
             addDeleteButtonToCourse(course);
+            addInfoButtonToCourse(course);
         });
     });
 
