@@ -157,4 +157,53 @@ document.addEventListener("DOMContentLoaded", function () {
             targetTerm.appendChild(courseDiv);
         }
     });
+
+        // Default compsci prereqs courses to populate on page load, 
+        const defaultCourses = [
+            { code: "CPSC 231", termId: "fall1" },
+            { code: "MATH 249", termId: "fall1" },
+            { code: "PHIL 279", termId: "fall1" },
+            { code: "CPSC 233", termId: "winter1" },
+            { code: "CPSC 251", termId: "winter1" },
+            { code: "MATH 211", termId: "winter1" },
+            { code: "CPSC 331", termId: "fall2" },
+            { code: "SENG 300", termId: "fall2" },
+            { code: "PHIL 314", termId: "fall2" },
+            { code: "CPSC 351", termId: "winter2" },
+            { code: "CPSC 355", termId: "winter2" },
+            { code: "CPSC 413", termId: "fall3" },
+            { code: "CPSC 449", termId: "fall3" },
+            { code: "CPSC 457", termId: "winter3" },
+        ];
+    
+        defaultCourses.forEach(({ code, termId }) => {
+            // Skip if course is already added
+            const isAlreadyAdded = Array.from(document.querySelectorAll(".course"))
+                .some(course => course.dataset.courseCode === code);
+            if (isAlreadyAdded) return;
+    
+            const courseDiv = document.createElement("div");
+            courseDiv.classList.add("course");
+            courseDiv.setAttribute("draggable", "true");
+            courseDiv.setAttribute("data-course-code", code);
+            courseDiv.textContent = code;
+    
+            const uniqueId = `${code.replace(/\s/g, "")}-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+            courseDiv.id = uniqueId;
+    
+            courseDiv.addEventListener("dragstart", (e) => {
+                e.dataTransfer.setData("text/plain", courseDiv.id);
+                setTimeout(() => {
+                    courseDiv.style.display = "none";
+                }, 0);
+            });
+    
+            courseDiv.addEventListener("dragend", () => {
+                courseDiv.style.display = "inline-block";
+            });
+    
+            const targetTerm = document.getElementById(termId);
+            if (targetTerm) targetTerm.appendChild(courseDiv);
+        });
+    
 });
