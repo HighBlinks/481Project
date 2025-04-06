@@ -86,7 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Filter courses
         const filteredCourses = courses.filter(course => {
             return (
-                (searchValue === "" || course.code.includes(searchValue)) &&
+                ((searchValue === "" || course.code.includes(searchValue)) ||
+                (searchValue === "" || course.code.replace(" ", "").includes(searchValue))) &&
                 (!selectedLevel || course.level == selectedLevel) &&
                 (!selectedTerm || course.term === selectedTerm) && (!selectedDiff || course.difficulty === selectedDiff)
             );

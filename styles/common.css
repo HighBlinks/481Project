@@ -65,30 +65,25 @@ select{
 main button:hover {
     background: #b82036; /* Darker red on hover */
 }
-.edit_button{
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    height: 2rem;
-    aspect-ratio: 1/1;
-    
-    background: #d82b42;
+.edit_button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #d82b42;
     color: white;
-    background-image: url('../img/edit.png'); /* out of /styles, into /img */
-    background-size: cover;
-    background-position: center;
-    
+    font-size: 0.9rem;
+    font-weight: 600;
     border: none;
     border-radius: 6px;
-
     cursor: pointer;
+
+    position: static;
 }
+
 .edit_button:hover {
-    background: #b82036; /* Darker red on hover */
-    background-image: url('../img/edit.png'); /* out of /styles, into /img */
-    background-size: cover;
-    background-position: center;
+    background-color: #b82036;
 }
+
 
 #popup {
     position: fixed;

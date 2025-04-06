@@ -1,4 +1,3 @@
-
 // Collapsible accordion logic
 document.querySelectorAll(".year-header").forEach(header => {
     header.addEventListener("click", () => {
@@ -6,6 +5,7 @@ document.querySelectorAll(".year-header").forEach(header => {
         content.style.display = content.style.display === "block" ? "none" : "block";
     });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     // Handle course completion toggle & delete button clicks using event delegation
     document.body.addEventListener("click", (event) => {
@@ -47,11 +47,12 @@ function showPopup(message) {
     const popup = document.getElementById("popup");
     popup.textContent = message;
     popup.classList.remove("hidden");
-  
+
     setTimeout(() => {
-      popup.classList.add("hidden");
+        popup.classList.add("hidden");
     }, 3000); // hide after 3 seconds
-  }
+}
+
 // Drag and Drop logic
 const courses = document.querySelectorAll(".course");
 const terms = document.querySelectorAll(".term");
@@ -87,16 +88,10 @@ terms.forEach(term => {
         term.classList.remove("drag-over");
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     const courseList = document.getElementById("course-list");
 
-    const yearMapping = {
-        200: "fall1", // Year 1
-        300: "fall2", // Year 2
-        400: "fall3", // Year 3
-    };
-
-    // Add click handler for each course in sidebar
     courseList.addEventListener("click", function (event) {
         const item = event.target;
         if (item.tagName.toLowerCase() === "li") {
@@ -104,74 +99,49 @@ document.addEventListener("DOMContentLoaded", function () {
             const level = parseInt(courseCode.match(/\d+/)[0]);
             const term = item.textContent.match(/(Fall|Winter|Spring|Summer)/i);
 
-            // Where the course should initially appear
             let targetId = "fall4"; // Default to Year 4
-            
 
             if (level >= 200 && level < 300) {
-                if (term[0] === "Fall") {
-                    targetId = "fall1";
-                } else if (term[0] === "Winter") {
-                    targetId = "winter1";
-                } else if (term[0] === "Spring") {
-                    targetId = "spring1";
-                } else if (term[0] === "Summer") {
-                    targetId = "summer1";
-                }
-
+                if (term[0] === "Fall") targetId = "fall1";
+                else if (term[0] === "Winter") targetId = "winter1";
+                else if (term[0] === "Spring") targetId = "spring1";
+                else if (term[0] === "Summer") targetId = "summer1";
             } else if (level >= 300 && level < 400) {
-                if (term[0] === "Fall") {
-                    targetId = "fall2";
-                } else if (term[0] === "Winter") {
-                    targetId = "winter2";
-                } else if (term[0] === "Spring") {
-                    targetId = "spring2";
-                } else if (term[0] === "Summer") {
-                    targetId = "summer2";
-                }
-
+                if (term[0] === "Fall") targetId = "fall2";
+                else if (term[0] === "Winter") targetId = "winter2";
+                else if (term[0] === "Spring") targetId = "spring2";
+                else if (term[0] === "Summer") targetId = "summer2";
             } else if (level >= 400 && level < 500) {
-                if (term[0] === "Fall") {
-                    targetId = "fall3";
-                } else if (term[0] === "Winter") {
-                    targetId = "winter3";
-                } else if (term[0] === "Spring") {
-                    targetId = "spring3";
-                } else if (term[0] === "Summer") {
-                    targetId = "summer3";
-                }
+                if (term[0] === "Fall") targetId = "fall3";
+                else if (term[0] === "Winter") targetId = "winter3";
+                else if (term[0] === "Spring") targetId = "spring3";
+                else if (term[0] === "Summer") targetId = "summer3";
             } else if (level >= 500) {
-                if (term[0] === "Fall") {
-                    targetId = "fall4";
-                } else if (term[0] === "Winter") {
-                    targetId = "winter4";
-                } else if (term[0] === "Spring") {
-                    targetId = "spring4";
-                } else if (term[0] === "Summer") {
-                    targetId = "summer4";
-                }
+                if (term[0] === "Fall") targetId = "fall4";
+                else if (term[0] === "Winter") targetId = "winter4";
+                else if (term[0] === "Spring") targetId = "spring4";
+                else if (term[0] === "Summer") targetId = "summer4";
             }
-            // Check if the course is already added to the target term
-            const targetTerm = document.getElementById(targetId);
 
-            // Check if a course with the same code is already in the term
-            const existingCourse = Array.from(targetTerm.children).find(course => course.textContent.trim() === courseCode);
-            if (existingCourse) {
+            // Check if course is already added anywhere
+            const isAlreadyAdded = Array.from(document.querySelectorAll(".course"))
+                .some(course => course.dataset.courseCode === courseCode);
+
+            if (isAlreadyAdded) {
                 showPopup("Error: Course already added. Please select another course.");
-                return; // If course is already added, do nothing
+                return;
             }
 
             // Create draggable course div
             const courseDiv = document.createElement("div");
             courseDiv.classList.add("course");
             courseDiv.setAttribute("draggable", "true");
+            courseDiv.setAttribute("data-course-code", courseCode);
             courseDiv.textContent = courseCode;
 
-            // Add unique ID so drag works properly
             const uniqueId = `${courseCode.replace(/\s/g, "")}-${Date.now()}`;
             courseDiv.id = uniqueId;
 
-            // Add drag event listeners to added course
             courseDiv.addEventListener("dragstart", (e) => {
                 e.dataTransfer.setData("text/plain", courseDiv.id);
                 setTimeout(() => {
@@ -183,13 +153,57 @@ document.addEventListener("DOMContentLoaded", function () {
                 courseDiv.style.display = "inline-block";
             });
 
-            // Append the course to the target term
+            const targetTerm = document.getElementById(targetId);
             targetTerm.appendChild(courseDiv);
         }
     });
+
+        // Default compsci prereqs courses to populate on page load, 
+        const defaultCourses = [
+            { code: "CPSC 231", termId: "fall1" },
+            { code: "MATH 249", termId: "fall1" },
+            { code: "PHIL 279", termId: "fall1" },
+            { code: "CPSC 233", termId: "winter1" },
+            { code: "CPSC 251", termId: "winter1" },
+            { code: "MATH 211", termId: "winter1" },
+            { code: "CPSC 331", termId: "fall2" },
+            { code: "SENG 300", termId: "fall2" },
+            { code: "PHIL 314", termId: "fall2" },
+            { code: "CPSC 351", termId: "winter2" },
+            { code: "CPSC 355", termId: "winter2" },
+            { code: "CPSC 413", termId: "fall3" },
+            { code: "CPSC 449", termId: "fall3" },
+            { code: "CPSC 457", termId: "winter3" },
+        ];
+    
+        defaultCourses.forEach(({ code, termId }) => {
+            // Skip if course is already added
+            const isAlreadyAdded = Array.from(document.querySelectorAll(".course"))
+                .some(course => course.dataset.courseCode === code);
+            if (isAlreadyAdded) return;
+    
+            const courseDiv = document.createElement("div");
+            courseDiv.classList.add("course");
+            courseDiv.setAttribute("draggable", "true");
+            courseDiv.setAttribute("data-course-code", code);
+            courseDiv.textContent = code;
+    
+            const uniqueId = `${code.replace(/\s/g, "")}-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+            courseDiv.id = uniqueId;
+    
+            courseDiv.addEventListener("dragstart", (e) => {
+                e.dataTransfer.setData("text/plain", courseDiv.id);
+                setTimeout(() => {
+                    courseDiv.style.display = "none";
+                }, 0);
+            });
+    
+            courseDiv.addEventListener("dragend", () => {
+                courseDiv.style.display = "inline-block";
+            });
+    
+            const targetTerm = document.getElementById(termId);
+            if (targetTerm) targetTerm.appendChild(courseDiv);
+        });
+    
 });
-
-
-
-
-
