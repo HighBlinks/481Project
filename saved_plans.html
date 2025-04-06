@@ -7,52 +7,106 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/saved_plans.css">
     <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/main_menu.css">
     <link rel="stylesheet" href="styles/footer.css">
     <title>View Saved Plans</title>
 
     <script defer src="js/load_header_and_footer.js"></script>
+    <script defer src="js/target_labels.js"></script>
 </head>
 <body>
     <div id="header-placeholder"></div> <!-- Header will load here -->
     
     <main>
         <div class="plan_list">
-            <input type="radio" name="plan" value="Plan_#1" id="Plan_#1" checked> <!-- default on --> 
-            <label for="Plan_#1">Plan # 1</label>
-
-            <input type="radio" name="plan" value="Plan_Ambitious" id="Plan_Ambitious">
-            <label for="Plan_Ambitious">Plan Ambitious</label>
-
-            <input type="radio" name="plan" value="Plan_Insanity" id="Plan_Insanity">
-            <label for="Plan_Insanity">Plan Insanity</label>
+            <label class="target_label label_checked" for="Plan_#1">Plan # 1</label>
+            <label class="target_label" for="Plan_Ambitious">Plan Ambitious</label>
+            <label class="target_label" for="Plan_Insanity">Plan Insanity</label>
         </div>
-        <div class="plan_details">
-            <h2>Plan # 1</h2>
-            <hr>
-            <b>Major:</b> Computer Science <br>
-            <b>Minor:</b> None <br>
-            <b>Concentration:</b> Minimal <br>
-            <b>Spring/Summer:</b> Neither<Br>
-            <br>
-            <hr>
-            Degree requirements:
-            <div class="requirements">
-                <ul>
-                    <li>CPSC 231 and CPSC 233</li>
-                    <li>CPSC 251</li>
-                    <li>CPSC 351, CPSC 355, CPSC 413, CPSC 449, CPSC 457</li>
-                    <li>CPSC 331</li>
-                    <li>SENG 300</li>
-                    <li>Math 249 or Math 265 or Math 275</li>
-                    <li>Phil 279</li>
-                    <li>Phil 314</li>
-                    <li>Min 12 units Breadth requirement</li>
-                    <li>Min 18 units in optional courses outside the Field of Computer Science</li>
-                </ul>
+        <div class="plan_info">
+            <input type="radio" name="plan" value="Plan_#1" id="Plan_#1" checked> <!-- default on --> 
+            <div class="plan_details">
+                <h2>Plan # 1</h2>
+                <hr>
+                <b>Major:</b> Computer Science <br>
+                <b>Minor:</b> None <br>
+                <b>Concentration:</b> Minimal <br>
+                <b>Spring/Summer:</b> Neither<Br>
+                <br>
+                <hr>
+                Degree requirements:
+                <div class="requirements">
+                    <ul>
+                        <li>CPSC 231 and CPSC 233</li>
+                        <li>CPSC 251</li>
+                        <li>CPSC 351, CPSC 355, CPSC 413, CPSC 449, CPSC 457</li>
+                        <li>CPSC 331</li>
+                        <li>SENG 300</li>
+                        <li>Math 249 or Math 265 or Math 275</li>
+                        <li>Phil 279</li>
+                        <li>Phil 314</li>
+                        <li>Min 12 units Breadth requirement</li>
+                        <li>Min 18 units in optional courses outside the Field of Computer Science</li>
+                    </ul>
+                </div>
+                
+                <button class="edit_button" onclick="location.href='degree_planner.html'">Edit Degree Plan ✏️</button>
             </div>
-            
-            <button class="edit_button" onclick="location.href='degree_planner.html'">Edit Degree Plan ✏️</button>
+            <input type="radio" name="plan" value="Plan_Ambitious" id="Plan_Ambitious">
+            <div class="plan_details">
+                <h2>Plan # 2</h2>
+                <hr>
+                <b>Major:</b> Computer Science <br>
+                <b>Minor:</b> None <br>
+                <b>Concentration:</b> Minimal <br>
+                <b>Spring/Summer:</b> Neither<Br>
+                <br>
+                <hr>
+                Degree requirements:
+                <div class="requirements">
+                    <ul>
+                        <li>CPSC 231 and CPSC 233</li>
+                        <li>CPSC 251</li>
+                        <li>CPSC 351, CPSC 355, CPSC 413, CPSC 449, CPSC 457</li>
+                        <li>CPSC 331</li>
+                        <li>SENG 300</li>
+                        <li>Math 249 or Math 265 or Math 275</li>
+                        <li>Phil 279</li>
+                        <li>Phil 314</li>
+                        <li>Min 12 units Breadth requirement</li>
+                        <li>Min 18 units in optional courses outside the Field of Computer Science</li>
+                    </ul>
+                </div>
+                
+                <button class="edit_button" onclick="location.href='degree_planner.html'">Edit Degree Plan ✏️</button>
+            </div>
+            <input type="radio" name="plan" value="Plan_Insanity" id="Plan_Insanity">
+            <div class="plan_details">
+                <h2>Plan # 3</h2>
+                <hr>
+                <b>Major:</b> Computer Science <br>
+                <b>Minor:</b> None <br>
+                <b>Concentration:</b> Minimal <br>
+                <b>Spring/Summer:</b> Neither<Br>
+                <br>
+                <hr>
+                Degree requirements:
+                <div class="requirements">
+                    <ul>
+                        <li>CPSC 231 and CPSC 233</li>
+                        <li>CPSC 251</li>
+                        <li>CPSC 351, CPSC 355, CPSC 413, CPSC 449, CPSC 457</li>
+                        <li>CPSC 331</li>
+                        <li>SENG 300</li>
+                        <li>Math 249 or Math 265 or Math 275</li>
+                        <li>Phil 279</li>
+                        <li>Phil 314</li>
+                        <li>Min 12 units Breadth requirement</li>
+                        <li>Min 18 units in optional courses outside the Field of Computer Science</li>
+                    </ul>
+                </div>
+                
+                <button class="edit_button" onclick="location.href='degree_planner.html'">Edit Degree Plan ✏️</button>
+            </div>
         </div>
     </main>
     <div id="footer-placeholder"></div> <!-- Footer will load here -->
