@@ -8,7 +8,6 @@ body{
     min-height: 100vh;
     margin: 0;  /* default HTML gives a small border, separating the content from the edge with an ugly band */
     min-width: 50em;
-    min-height: 50em;
     background-color: #EEE;
 }
 main{
