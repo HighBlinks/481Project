@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/common.css">
-    <link rel="stylesheet" href="styles/main_menu.css">
+    <!-- <link rel="stylesheet" href="styles/main_menu.css"> -->
     <link rel="stylesheet" href="styles/main-content.css">
     <link rel="stylesheet" href="styles/sidebar.css">
     
@@ -20,6 +20,7 @@
     <script defer src="js/sidebar.js"></script>
     <script defer src="js/main-content.js"></script>
     <script defer src="js/selectedSemesters.js"></script>
+    <script defer src="js/sidebar_label_styles.js"></script>
 </head>
 <body>
     <div id="header-placeholder"></div> <!-- Header will load here -->
@@ -30,45 +31,89 @@
     <div class="content">
         <!-- Sidebar -->
         <div class="sidebar">
-            <h3>Course Search</h3>
-            <input type="text" id="course-search" placeholder="Enter course code...">
+            <div class="sidebar_labels">
+                <!-- for="" lets the label be far away from the actual input -->
+                <!-- input is kept near the content it modifies in order to use -->
+                <!-- the '+' next sibling selector in the CSS -->
+                <label for="degree_requirements" class="label_checked">Requirements</label> 
+                <label for="degree_info">Degree info</label>
+                <label for="course_search">Search</label>
+                <label for="help">?</label>
+            </div>
+            
+            <input type="radio" name="sidebar" id="degree_requirements" checked>
+            <div class="radio_box">
+                <h3>Degree requirements</h3>
+                <ul>
+                    <li>do this</li>
+                    <li>and this</li>
+                    <li>but not this</li>
+                </ul>
+            </div>
 
-            <h4>Filters</h4>
-            <form id="filter-form">
-                <label>Course Level:
-                    <select name="level">
-                        <option value="">All</option>
-                        <option value="200">200</option>
-                        <option value="300">300</option>
-                        <option value="400">400</option>
-                        <option value="500">500</option>
-                    </select>
-                </label>
+            <input type="radio" name="sidebar" id="course_search">
+            <div class="radio_box">
+                <h3>Course Search</h3>
+                <input type="text" id="course-search" placeholder="Enter course code...">
+    
+                <h4>Filters</h4>
+                <form id="filter-form">
+                    <label>Course Level:
+                        <select name="level">
+                            <option value="">All</option>
+                            <option value="200">200</option>
+                            <option value="300">300</option>
+                            <option value="400">400</option>
+                            <option value="500">500</option>
+                        </select>
+                    </label>
+    
+                    <label>Term:
+                        <select name="term">
+                            <option value="">All</option>
+                            <option value="Fall">Fall</option>
+                            <option value="Winter">Winter</option>
+                            <option value="Spring">Spring</option>
+                            <option value="Summer">Summer</option>
+                        </select>
+                    </label>
+    
+                    <label>Difficulty:
+                        <select name="diff">
+                            <option value="">Any</option>
+                            <option value="1">💀</option>
+                            <option value="2">💀💀</option>
+                            <option value="3">💀💀💀</option>
+                            <option value="4">💀💀💀💀</option>
+                            <option value="5">💀💀💀💀💀</option>
+                        </select>
+                    </label>
+    
+                </form>
+                <ul id="course-list"></ul>
+            </div>
 
-                <label>Term:
-                    <select name="term">
-                        <option value="">All</option>
-                        <option value="Fall">Fall</option>
-                        <option value="Winter">Winter</option>
-                        <option value="Spring">Spring</option>
-                        <option value="Summer">Summer</option>
-                    </select>
-                </label>
+            <input type="radio" name="sidebar" id="degree_info">
+            <div class="radio_box">
+                <h3>Degree Info</h3>
+                <ul>
+                    <li>Major: </li>
+                    <li>Minor: </li>
+                    <li>Concentration: </li>
+                </ul>
+            </div>
 
-                <label>Difficulty:
-                    <select name="diff">
-                        <option value="">Any</option>
-                        <option value="1">💀</option>
-                        <option value="2">💀💀</option>
-                        <option value="3">💀💀💀</option>
-                        <option value="4">💀💀💀💀</option>
-                        <option value="5">💀💀💀💀💀</option>
-                    </select>
-                </label>
-
-            </form>
-
-            <ul id="course-list"></ul>
+            <input type="radio" name="sidebar" id="help">
+            <div class="radio_box">
+                <h3>How can I assist you?</h3>
+                <ul>
+                    <li>What's happening???</li>
+                    <li>Add a course</li>
+                    <li>Remove a course</li>
+                    <li>Track completion</li>
+                    <li>Save and load plans</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Main Content -->
