@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function addDeleteButtonToCourse(course) {
         if (!course.querySelector(".delete-btn")) {
             const deleteButton = document.createElement("button");
-            deleteButton.textContent = "X";
+            deleteButton.textContent = "x";
             deleteButton.classList.add("delete-btn");
             course.appendChild(deleteButton);
         }
