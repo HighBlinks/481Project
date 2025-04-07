@@ -133,16 +133,19 @@
 }
 
 .sidebar {
+    display: grid;
+    grid-template-rows: auto 1fr;
     width: 30%;
     max-width: 300px;
     border-right: 2px solid #ddd;
-    padding: 25px;
+    padding: 2px;
     overflow-y: auto;
     transition: transform 0.3s ease-in-out;
-    flex-grow: 1; /* Takes remaining space between header and footer */
     position: relative;
 }
 .sidebar button {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     top: 10px;
     right: -25px;
@@ -194,10 +197,16 @@
     display: none; /* get rid of ugly radio circles */
 }
 .radio_box{
+    box-sizing: border-box;
     display: none; /* default hidden (only checked option's can be seen) */
+    width: 100%;
+    padding: 0em 1em;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
 }
-.sidebar input[type="radio"]:checked + .radio_box{
-    display: inline;
+.sidebar input[type="radio"]:checked + .radio_box{ /* next-sibling selector */ 
+    display: inline-block;
 }
 
 
