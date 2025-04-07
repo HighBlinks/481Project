@@ -2,7 +2,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     fetch("header.html")
         .then(response => response.text())
-        .then(data => document.getElementById("header-placeholder").innerHTML = data);
+        .then(data => {
+            document.getElementById("header-placeholder").innerHTML = data;
+            style_current_page_btn();
+        });
 
     fetch("footer.html")
         .then(response => response.text())
@@ -11,7 +14,16 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("login_header.html")
         .then(response => response.text())
         .then(data => document.getElementById("header-login-placeholder").innerHTML = data);
-    fetch("header_main_menu.html")
-        .then(response => response.text())
-        .then(data => document.getElementById("header-main-menu-placeholder").innerHTML = data);
+
 });
+
+function style_current_page_btn(){
+    const body = document.querySelector("body");
+    const page = body.dataset.page;
+    const nav_a = document.querySelectorAll('header nav a');
+    nav_a.forEach(a => {
+        if(a.textContent == page){
+            a.classList.add("current_page")
+        }
+    })
+}

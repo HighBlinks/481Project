@@ -96,9 +96,8 @@ header nav a {
 header nav a:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
-.point_to_none{
-    content: "";
-    pointer-events: none;
-    color: rgba(0,0,0,0);
-}
 
+header nav .current_page {
+    color: rgb(203, 158, 158);
+    background-color: #b70000; /* the page the user is currently on */
+}
