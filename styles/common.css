@@ -10,6 +10,9 @@ body{
     min-width: 50em;
     background-color: #EEE;
 }
+.loading{
+    display: none;
+}
 main{
     flex: 1; /* push the footer via empty space to bottom, if needed */
     margin: 2rem 1.5rem 2rem;

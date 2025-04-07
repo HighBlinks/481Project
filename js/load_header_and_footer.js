@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             document.getElementById("header-placeholder").innerHTML = data;
             style_current_page_btn();
+            set_body_visible();
         });
 
     fetch("footer.html")
@@ -13,7 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
     
     fetch("login_header.html")
         .then(response => response.text())
-        .then(data => document.getElementById("header-login-placeholder").innerHTML = data);
+        .then(data => {
+            document.getElementById("header-login-placeholder").innerHTML = data;
+            set_body_visible();
+        });
 
 });
 
@@ -26,4 +30,8 @@ function style_current_page_btn(){
             a.classList.add("current_page")
         }
     })
+}
+
+function set_body_visible(){
+    document.querySelector('body').classList.remove('loading');
 }

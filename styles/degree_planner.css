@@ -185,6 +185,7 @@
     padding: 0.25rem;
     border-radius: 0.25rem 0.25rem 0rem 0rem;
     border: solid black 1px;
+    cursor: pointer;
     background-color: #cacaca;
 }
 .sidebar_labels > label:hover{
