@@ -173,7 +173,6 @@
     background-color: #ddd;
 }
 
-/* ----------------------- main content (large right section) ----------------------- */
 .sidebar_labels{
     display: flex;
 }
@@ -211,6 +210,7 @@
 }
 
 
+/* ----------------------- main content (large right section) ----------------------- */
 .course {
     position: relative;
     display: inline-block;

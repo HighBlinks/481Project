@@ -12,15 +12,16 @@
 
     <script defer src="js/load_header_and_footer.js"></script>
     <script defer src="js/target_labels.js"></script>
+    <script defer src="js/callback_saved_plans.js"></script>
 </head>
 <body data-page="Saved Plans" class="loading">
     <div id="header-placeholder"></div> <!-- Header will load here -->
     
     <main>
         <div class="plan_list">
-            <label class="target_label label_checked" for="Plan_#1">Plan # 1</label>
-            <label class="target_label" for="Plan_Ambitious">Plan Ambitious</label>
-            <label class="target_label" for="Plan_Insanity">Plan Insanity</label>
+            <label class="target_label label_checked" for="Plan_#1" tabindex="1">Plan # 1</label>
+            <label class="target_label" for="Plan_Ambitious" tabindex="1">Plan Ambitious</label>
+            <label class="target_label" for="Plan_Insanity" tabindex="1">Plan Insanity</label>
         </div>
         <div class="plan_info">
             <input type="radio" name="plan" value="Plan_#1" id="Plan_#1" checked> <!-- default on --> 

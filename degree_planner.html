@@ -18,6 +18,7 @@
     <script defer src="js/main-content.js"></script>
     <script defer src="js/selectedSemesters.js"></script>
     <script defer src="js/target_labels.js"></script>
+    <script defer src="js/callback_degree_planner.js"></script>
 </head>
 <body class="loading">
     <div id="header-placeholder"></div> <!-- Header will load here -->
@@ -32,10 +33,10 @@
                 <!-- for="" lets the label be far away from the actual input -->
                 <!-- input is kept near the content it modifies in order to use -->
                 <!-- the '+' next sibling selector in the CSS -->
-                <label class="target_label label_checked" for="degree_info">Degree Info</label>
-                <label class="target_label" for="course_info">Course Info</label> 
-                <label class="target_label" for="course_search">Search</label>
-                <label class="target_label" for="help">?</label>
+                <label class="target_label label_checked" for="degree_info" tabindex="2">Degree Info</label>
+                <label class="target_label" for="course_info" tabindex="2">Course Info</label> 
+                <label class="target_label" for="course_search" tabindex="2">Search</label>
+                <label class="target_label" for="help" tabindex="2">?</label>
             </div>
             
             <input type="radio" name="sidebar" id="degree_info" checked>
@@ -120,7 +121,7 @@
         <div class="main-content">
             <h2 class="title-with-icon">
                 Degree Plan 
-                <button class="save-icon" title="Save Plan">💾</button>
+                <button class="save-icon" title="Save Plan" tabindex="1">💾</button>
             </h2>
             
             <div class="progress-container">
@@ -138,7 +139,7 @@
             </div>
             
             <div class="year">
-                <div class="year-header">Year 1</div>
+                <div class="year-header" tabindex="1">Year 1</div>
                 <div class="year-content">
                     <div class="term fall" id="fall1">
                         <strong>Fall Term</strong>
@@ -157,7 +158,7 @@
             </div>
 
             <div class="year">
-                <div class="year-header">Year 2</div>
+                <div class="year-header" tabindex="1">Year 2</div>
                 <div class="year-content">
                     <div class="term fall" id="fall2">
                         <strong>Fall Term</strong>
@@ -175,7 +176,7 @@
             </div>
 
             <div class="year">
-                <div class="year-header">Year 3</div>
+                <div class="year-header" tabindex="1">Year 3</div>
                 <div class="year-content">
                     <div class="term fall" id="fall3">
                         <strong>Fall Term</strong>
@@ -193,7 +194,7 @@
             </div>
 
             <div class="year">
-                <div class="year-header">Year 4</div>
+                <div class="year-header" tabindex="1">Year 4</div>
                 <div class="year-content">
                     <div class="term fall" id="fall4">
                         <strong>Fall Term</strong>
@@ -211,7 +212,7 @@
             </div>
 
             <div class="year" id="year5" style="display: none;">
-                <div class="year-header">Year 5</div>
+                <div class="year-header" tabindex="1">Year 5</div>
                 <div class="year-content">
                     <div class="term fall" id="fall5">
                         <strong>Fall Term</strong>
@@ -230,7 +231,7 @@
             
 
             <div class="year" id="year6" style="display: none;">
-                <div class="year-header">Year 6</div>
+                <div class="year-header"  tabindex="5000">Year 6</div>
                 <div class="year-content">
                     <div class="term fall" id="fall6">
                         <strong>Fall Term</strong>

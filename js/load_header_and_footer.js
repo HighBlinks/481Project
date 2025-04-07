@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("header-placeholder").innerHTML = data;
             style_current_page_btn();
             set_body_visible();
+            set_header_callbacks();
         });
 
     fetch("footer.html")
@@ -34,4 +35,14 @@ function style_current_page_btn(){
 
 function set_body_visible(){
     document.querySelector('body').classList.remove('loading');
+}
+
+function set_header_callbacks(){
+    const headerNavAnchors = document.querySelectorAll('header nav a');
+
+    document.addEventListener('keydown', e => {
+        if(e.key >= '1' && e.key <= headerNavAnchors.length){
+            headerNavAnchors[e.key-1].click();
+        } 
+    })
 }

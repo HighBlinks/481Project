@@ -24,10 +24,10 @@
                 <div id="input_panel">
                     <label for="name">Name the plan: </label>
                     <!-- Just a few hard-coded options -->
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" tabindex="1">
                     <label for="major">Major: </label>
                     <!-- Just a few hard-coded options -->
-                    <select name="major" id="major">
+                    <select name="major" id="major" tabindex="1">
                         <option value="CPSC">Computer Science</option>
                         <option value="ANTH">Anthropology</option>
                         <option value="ENGL">English</option>
@@ -38,7 +38,7 @@
                     </select>
                     <label for="major">Double Major: </label>
                     <!-- Just a few hard-coded options -->
-                    <select name="major" id="major">
+                    <select name="major" id="major" tabindex="1">
                         <option value="NA">N/A</option>
                         <option value="CPSC">Computer Scince</option>
                         <option value="ANTH">Anthropology</option>
@@ -50,7 +50,7 @@
                     </select>
                     <!-- Just a few hard-coded options -->
                     <label for="concentration">Concentration: </label>
-                    <select name="concentration" id="concentration">
+                    <select name="concentration" id="concentration" tabindex="1">
                         <option value="game_dev">N/A</option>
                         <option value="game_dev">Computer Game Development</option>
                         <option value="graphics">Computer Graphics</option>
@@ -64,7 +64,7 @@
                     </select>
                     <!-- Just a few hard-coded options -->
                     <label for="minor">Minor: </label>
-                    <select name="minor" id="minor">
+                    <select name="minor" id="minor" tabindex="1">
                         <option value="game_dev">N/A</option>
                         <option value="ANTH">Anthropology</option>
                         <option value="CPSC">Computer Scince</option>
@@ -76,20 +76,22 @@
                     </select>
                     
                     <label for="semesters">Taking spring/ summer courses: </label>
-                    <select name="spring-summer" id="spring-summer">
+                    <select name="spring-summer" id="spring-summer" tabindex="1">
                         <option value="none">None</option>
                         <option value="spring">Spring</option>
                         <option value="summer">Summer</option>
                         <option value="both">Both</option>
                     </select>
                     <label for="num_years">How many years do want to complete your degree in: </label>
-                    <select name="years" id="years">
+                    <select name="years" id="years" tabindex="1">
                         <option value="4">4</option>
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
                 </div>
-                <a href="degree_planner.html" class="no_decoration"><button class="regular_button">Submit</button></a>
+                <a href="degree_planner.html" class="no_decoration" tabindex="-1">
+                    <button class="regular_button" tabindex="1">Submit</button>
+                </a>
             </div>
         </div>
     </main>

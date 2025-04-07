@@ -20,7 +20,7 @@
             <img src="img/HmphJud.webp" alt="User profile pic" class="profile_img">
             <div class="setting-item">
                 <label for="profile-pic">Update Profile Picture:</label>
-                <input type="file" id="profile-pic" accept="image/*">
+                <input type="file" id="profile-pic" accept="image/*" tabindex="2">
             </div>
             
             <div class="setting-item">
@@ -34,9 +34,8 @@
             </div>
 
             <div class="setting-item">
-                <button class ="font-size-btn">Save Changes</button>
+                <button class ="font-size-btn" tabindex="2">Save Changes</button>
             </div>
-
         </section>
 
         <!-- Right Column: Settings Content -->
@@ -45,15 +44,15 @@
             <h3>Other Settings</h3>
             <div class="setting-item">
                 <label>Font Size:</label>
-                <button class="font-size-btn" data-size="small">Small</button>
-                <button class="font-size-btn" data-size="medium">Medium</button>
-                <button class="font-size-btn" data-size="large">Large</button>
+                <button class="font-size-btn" data-size="small" tabindex="1">Small</button>
+                <button class="font-size-btn" data-size="medium" tabindex="1">Medium</button>
+                <button class="font-size-btn" data-size="large" tabindex="1">Large</button>
             </div>
 
             <div class="setting-item">
                 <label>Security Settings:</label>
-                <button>Enable Two-Factor Authentication</button>
-                <button>Manage Devices</button>
+                <button tabindex="1">Enable Two-Factor Authentication</button>
+                <button  tabindex="1">Manage Devices</button>
             </div>
         </section>
     </main>

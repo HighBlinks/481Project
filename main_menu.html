@@ -11,6 +11,7 @@
     <title>Main menu</title>
     
     <script defer src="js/load_header_and_footer.js"></script>
+    <script defer src="js/callback_main_menu.js"></script>
 </head>
 <body data-page="Main Menu" class="loading">
     <div id="header-placeholder"></div> <!-- Header will load here -->
@@ -18,10 +19,18 @@
     <main>
         <div class="regular_panel">
             <nav>
-                <a href="saved_plans.html"><button>Saved Plans</button></a>
-                <a href="create_plan.html"><button>Make A New Plan</button></a>
-                <a href="deadlines.html"><button> Deadlines & Info</button></a>
-                <a href="guide.html"><button>User Guide</button></a>
+                <a href="saved_plans.html" tabindex="-1">
+                    <button tabindex="1">Saved Plans</button>
+                </a>
+                <a href="create_plan.html" tabindex="-1">
+                    <button tabindex="1">Make A New Plan</button>
+                </a>
+                <a href="deadlines.html" tabindex="-1">
+                    <button tabindex="1">Deadlines & Info</button>
+                </a>
+                <a href="guide.html" tabindex="-1">
+                    <button tabindex="1">User Guide</button>
+                </a>
             </nav>
         </div>
     </main>
