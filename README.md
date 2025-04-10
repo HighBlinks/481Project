@@ -1,0 +1,2 @@
+Preq Not Met Error: Add CPSC 544  will tell u need to add cpsc 433
+Anti Req Error: adding cpsc 319 will tell u cpsc 331 is an antireq and u cant have both (will work both ways so u can have cpsc 319 added and try to add 331 and that wont work either)

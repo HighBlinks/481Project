@@ -11,8 +11,8 @@ function loginUser(){
         sessionStorage.setItem("profileImg", "img/HmphJud.webp");
         document.location.href = "mainMenu.html";
     }
-    else if (uname == 'not Plebian Dunce' && pword == 'password'){  // this is a different user
-        sessionStorage.setItem("profileImg", "img/avatar.png");     // can have a separate pic
+    else if (uname == 'Vance' && pword == 'password'){  // this is a different user
+        sessionStorage.setItem("profileImg", "img/vincnt.png");     // can have a separate pic
         document.location.href = "mainMenu.html";                   // can go to separate place (if we hardcode a landing for them)
     }
     else {   // default to avatar/ main menu 
