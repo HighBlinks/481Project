@@ -76,6 +76,75 @@ header nav{
     flex: 1;
 }
 
+.upperRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.upperLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.upperLeft a:link {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+.upperLeft a:visited {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+.upperLeft a:hover {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+.upperLeft a:active {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+.logout {
+    width: 30%;
+    padding: 10px;
+    margin: 10%;
+    border-radius: 5px;
+    background-color: darkred;
+}
+
+.logout a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+.logout a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+.logout a:hover {
+    color:yellow;
+    background-color: transparent;
+  }
+  
+.logout a:active {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
 header nav a {
     flex: 1;
     display: flex;

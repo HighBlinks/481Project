@@ -1,6 +1,6 @@
 // track control key state with a boolean
 let controlKeyDown = false;
-const CONTROL_KEY = ',';
+const CONTROL_KEY = 'a';
 
 document.addEventListener('keydown', e =>{
     if (e.key == CONTROL_KEY){
