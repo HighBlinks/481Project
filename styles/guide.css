@@ -15,7 +15,7 @@
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
-    position: absolute;
+    position: relative;
     top: 50%;
     width: auto;
     margin-top: -22px;
@@ -30,8 +30,8 @@
   
   /* Position the "next button" to the right */
   .next {
-    left: 0;
     border-radius: 3px 0 0 3px;
+    position: relative;
   }
   
   /* On hover, add a black background color with a little bit see-through */
@@ -41,12 +41,13 @@
   
   /* Caption text */
   .text {
-    color: #f2f2f2;
+    color: black;
+    background-color: lightgrey;
     font-size: 15px;
     padding: 8px 12px;
-    position: absolute;
+    position: relative;
     bottom: 8px;
-    width: 100%;
+    width: auto;
     text-align: center;
   }
   
