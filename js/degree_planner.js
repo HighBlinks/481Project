@@ -239,13 +239,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            // Check Preq for CPSC 501 is CPSC 449
+            // Check Preq for CPSC 544 is CPSC 433
+         // Check Preq for CPSC 544 is CPSC 433
             if (courseCode === "CPSC 544") {
-                const has449 = Array.from(document.querySelectorAll(".course"))
+                const has433 = Array.from(document.querySelectorAll(".course"))
                     .some(course => course.dataset.courseCode === "CPSC 433");
                 
                 if (!has433) {
-                    showPopup("Error: Missing Prerequisite - Add CPSC 449 first");
+                    showPopup("Error: Missing Prerequisite - Add CPSC 433 first");
                     return;
                 }
             }
