@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
             style_current_page_btn();
             set_body_visible();
             set_header_callbacks();
+        })
+        .then(()=>{
+            const welcomeMsg = document.getElementById('headerWelcome');
+            welcomeMsg.textContent = "Welcome, " + sessionStorage.getItem("username")
+            const profileImg = document.getElementById('profileImg');
+            profileImg.src = sessionStorage.getItem("profileImg");
         });
 
     fetch("footer.html")
