@@ -81,8 +81,6 @@ main button:hover {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-
-    position: static;
 }
 
 .edit_button:hover {
