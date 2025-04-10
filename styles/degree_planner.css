@@ -66,6 +66,10 @@
     cursor: pointer;
     transition: all 0.2s;
 }
+.help-icon:hover {
+    background: #3a5bef;
+    transform: scale(1.1);
+}
 
 
 #save-popup {
@@ -95,10 +99,7 @@
 .spacer {
     flex-grow: 1;
 }
-.help-icon:hover {
-    background: #3a5bef;
-    transform: scale(1.1);
-}
+
 
 /* Floating Dialog Box */
 .dialog-box {
@@ -230,6 +231,10 @@
 
 .text{
     font-size: xx-large;
+}
+
+.text2{
+    font-size: x-large;
 }
 
 /* --------------- years/ terms/ course tiles --------------- */

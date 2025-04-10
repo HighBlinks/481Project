@@ -29,3 +29,91 @@ nav button {
 main nav button:hover {
     background-color: #b71c1c; /* Darker red for hover effect */
 }
+
+.text{
+    font-size: xx-large;
+}
+
+.text2{
+    font-size: x-large;
+}
+
+/* Floating Dialog Box */
+.dialog-box {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.dialog-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #ef3f36;
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+.dialog-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.dialog-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.dialog-content {
+    padding: 20px;
+}
+
+.dialog-content ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.dialog-content li {
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Help Button */
+.help-icon {
+    margin-left: auto;
+    margin-right: 20px;
+    width: 45px;
+    font-size: 2rem;
+    height: 45px;
+    border-radius: 50%;
+    background: #4a6bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.help-icon:hover {
+    background: #3a5bef;
+    transform: scale(1.1);
+}
