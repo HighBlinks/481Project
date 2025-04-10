@@ -2,9 +2,9 @@ console.log('connected!');
 
 
 function loginUser(){
-    const uname = document.getElementById('username').value;
+    const uname = document.getElementById('username').value || "Guest";
     const pword = document.getElementById('password').value;
-    console.log('ran')
+
 
     sessionStorage.setItem("username", uname);
     if(uname == 'Plebian Dunce' && pword == 'password'){
