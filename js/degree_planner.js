@@ -81,10 +81,10 @@ function showCourseInfo(courseCode) {
         items[3].innerHTML = `<strong>Difficulty:</strong> ${"💀".repeat(parseInt(courseData.difficulty)) || "Not rated"}`;
         items[4].innerHTML = `<strong>Offered:</strong> ${courseData.term || "Unknown"}`;
     } else {
-        items[1].innerHTML = "<strong>Prerequisites:</strong> Data not available";
-        items[2].innerHTML = "<strong>Antirequisites:</strong> Data not available";
-        items[3].innerHTML = "<strong>Difficulty:</strong> Data not available";
-        items[4].innerHTML = "<strong>Offered:</strong> Data not available";
+        items[1].innerHTML = "<strong>Prerequisites:</strong> None";
+        items[2].innerHTML = "<strong>Antirequisites:</strong> None";
+        items[3].innerHTML = "<strong>Difficulty:</strong> Not rated";
+        items[4].innerHTML = "<strong>Offered:</strong> Unknown";
     }
 }
 
