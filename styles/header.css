@@ -78,9 +78,10 @@ header nav{
 
 .upperRight {
     display: flex;
+    gap: 20px;
     flex-direction: row;
     align-items: center;
-    margin-right: 20px;
+    /* padding-right: 20px; */
 }
 
 .upperLeft {
@@ -117,16 +118,12 @@ header nav{
 .logout {
     width: 30%;
     padding: 10px;
-    margin: 10%;
+    /* margin: 10%; */
     border-radius: 5px;
     background-color: darkred;
-}
-
-.logout a:link {
     color: white;
-    background-color: transparent;
     text-decoration: none;
-  }
+}
   
 .logout a:visited {
     color: white;
