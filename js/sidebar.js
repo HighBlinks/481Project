@@ -18,8 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
    
     { code: "CPSC 304", level: 300, term: "Fall", difficulty: "4", Preq: "CPSC 231 and 233", AntiReq: "" },
     { code: "CPSC 313", level: 300, term: "Winter", difficulty: "4", Preq: "CPSC 231 and 233", AntiReq: "" },
-    
-    
+    { code: "CPSC 319", level: 300, term: "Winter", difficulty: "3", Preq: "3 units from Computer Science 219, 233 or 235; and 3 units from Mathematics 249, 265 or 275; and Philosophy 279 or 377; and Computer Science 251; or Statistics 213 and Mathematics 271 or 273.", AntiReq: "CPSC 331" },
+
+
     { code: "CPSC 331", level: 300, term: "Fall", difficulty: "4", Preq: "CPSC 231 and 233", AntiReq: "" },
     { code: "CPSC 335", level: 300, term: "Winter", difficulty: "4", Preq: "CPSC 231 and 233", AntiReq: "" },
     
