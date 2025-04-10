@@ -67,16 +67,16 @@
     transition: all 0.2s;
 }
 
-/* Add this to your existing CSS */
+
 #save-popup {
     position: fixed;
     top: 200px;  
-    right: 3%;
+    right: 7%;
     font-weight: bold;
     transform: translate(-50%, -50%);
     background-color: #f8f9fa;
     color: #28a745;
-    padding: 15px 30px;
+    padding: 10px 15px;
     border: 2px solid #28a745;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
