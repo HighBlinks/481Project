@@ -34,13 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
    
     { code: "CPSC 453", level: 400, term: "Fall", difficulty: "5", Preq: "CPSC 319 or 331; and MATH 211 or 213; and 3 units from MATH 253, 267, 277, 283 or Applied Mathematics 219", AntiReq: "" },
     { code: "CPSC 457", level: 400, term: "Winter", difficulty: "5", Preq: "CPSC 319 or 331; and CPSC 355 or Computer Engineering 369", AntiReq: "" },
-    
+    { code: "CPSC 449", level: 400, term: "Winter", difficulty: "5", Preq: "Computer Science 319 or 331; Computer Science 313 or 351; and Philosophy 279 or 377.", AntiReq: "Credit for Computer Science 449 and 349 will not be allowed." },
     
     { code: "CPSC 481", level: 400, term: "Fall", difficulty: "5", Preq: "One of CPSC 301, 333, Software Engineering 301 or 311", AntiReq: "" },
     { code: "CPSC 491", level: 400, term: "Winter", difficulty: "5", Preq: "CPSC 355; and 319 or 331", AntiReq: "" },
-    
+    { code: "CPSC 433", level: 400, term: "Winter", difficulty: "3", Preq: "Computer Science 313 or 351; and Philosophy 279 or 377.", AntiReq: " " },
+
+    { code: "CPSC 544", level: 500, term: "Winter", difficulty: "5", Preq: "Computer Science 433.", AntiReq: "Credit for Computer Science 544 and 599.44 will not be allowed" },   
+    { code: "CPSC 501", level: 500, term: "Fall", difficulty: "3", Preq: "Computer Science 449.", AntiReq: " " },
     { code: "CPSC 503", level: 500, term: "Winter", difficulty: "5", Preq: "Consent of the Department", AntiReq: "" },
-   
+    
     
     { code: "CPSC 513", level: 500, term: "Fall", difficulty: "5", Preq: "Consent of the Department", AntiReq: "" },
     { code: "CPSC 517", level: 500, term: "Winter", difficulty: "5", Preq: "Consent of the Department", AntiReq: "" },

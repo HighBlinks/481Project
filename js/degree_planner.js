@@ -228,6 +228,27 @@ document.addEventListener("DOMContentLoaded", function () {
                     return;
                 }
             }
+
+            if (courseCode === "CPSC 331") {
+                const has331 = Array.from(document.querySelectorAll(".course"))
+                    .some(course => course.dataset.courseCode === "CPSC 319");
+
+                if (has331) {
+                    showPopup("Error: CPSC 319 and CPSC 331 are antirequisites.");
+                    return;
+                }
+            }
+
+            // Check Preq for CPSC 501 is CPSC 449
+            if (courseCode === "CPSC 544") {
+                const has449 = Array.from(document.querySelectorAll(".course"))
+                    .some(course => course.dataset.courseCode === "CPSC 433");
+                
+                if (!has433) {
+                    showPopup("Error: Missing Prerequisite - Add CPSC 449 first");
+                    return;
+                }
+            }
             
 
             // Create draggable course div
