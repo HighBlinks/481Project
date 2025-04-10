@@ -239,8 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            // Check Preq for CPSC 544 is CPSC 433
-         // Check Preq for CPSC 544 is CPSC 433
+             // Check Preq for CPSC 544 is CPSC 433
             if (courseCode === "CPSC 544") {
                 const has433 = Array.from(document.querySelectorAll(".course"))
                     .some(course => course.dataset.courseCode === "CPSC 433");
