@@ -10,9 +10,15 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(()=>{
             const welcomeMsg = document.getElementById('headerWelcome');
-            welcomeMsg.textContent = "Welcome, " + sessionStorage.getItem("username")
+            welcomeMsg.textContent = "Welcome, " + (sessionStorage.getItem("username") || "Guest");
             const profileImg = document.getElementById('profileImg');
-            profileImg.src = sessionStorage.getItem("profileImg");
+            profileImg.src = sessionStorage.getItem("profileImg") || "img/avatar.png";
+
+            const profileImg2 = document.getElementById('subProfileImg'); // just for settings
+            if(profileImg2){
+                profileImg2.src = sessionStorage.getItem("profileImg") || "img/avatar.png";
+            }
+
         });
 
     fetch("footer.html")
