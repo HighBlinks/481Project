@@ -12,11 +12,13 @@
     transition: margin-left 0.3s ease-in-out;
 }
 
-/* --------------- title --------------- */
-.title-with-icon {
+/* --------------- title, save icon, help icon --------------- */
+.title-container {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
 }
 .save-icon {
     width: 24px;
@@ -32,7 +34,103 @@
 .save-icon:hover {
     filter: brightness(85%);
 }
+/* Help Button */
+.help-icon {
+    margin-left: auto;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #4a6bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.spacer {
+    flex-grow: 1;
+}
+.help-icon:hover {
+    background: #3a5bef;
+    transform: scale(1.1);
+}
 
+/* Floating Dialog Box */
+.dialog-box {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.dialog-box.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #ef3f36;
+    color: white;
+    border-radius: 12px 12px 0 0;
+}
+
+.dialog-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.dialog-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.dialog-content {
+    padding: 20px;
+}
+
+.dialog-content ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.dialog-content li {
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+/* Fake buttons for demonstration */
+.fake-info-btn, .fake-delete-btn {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    background: #4a6bff;
+    color: white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    margin: 0 2px;
+}
+.fake-delete-btn {
+    background: #ff4a4a;
+}
 /* --------------- progress bar --------------- */
 .progress-container {
     display: flex;
@@ -328,3 +426,4 @@
 .requirements-container::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+

@@ -32,7 +32,26 @@ document.addEventListener("DOMContentLoaded", () => {
             course.appendChild(deleteButton);
         }
     }
+    // When question mark is clicked display help info
+    // Toggle dialog visibility
+    const helpIcon = document.querySelector('.help-icon');
+    const helpDialog = document.getElementById('help-dialog');
+    const dialogClose = document.querySelector('.dialog-close');
 
+    helpIcon.addEventListener('click', () => {
+        helpDialog.classList.toggle('visible');
+    });
+
+    dialogClose.addEventListener('click', () => {
+        helpDialog.classList.remove('visible');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!helpDialog.contains(e.target) && e.target !== helpIcon) {
+            helpDialog.classList.remove('visible');
+        }
+    });
 // degree_planner.js
 
 // Modified addInfoButtonToCourse function
