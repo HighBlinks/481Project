@@ -1,3 +1,17 @@
+// track control key state with a boolean
+const CONTROL_KEY_ = 'a';
+
+document.addEventListener('keydown', e =>{
+    if (e.key == CONTROL_KEY_){
+        sessionStorage.setItem("controlCharDown", "true");
+    }
+});
+document.addEventListener('keyup', e =>{
+    if (e.key == CONTROL_KEY_){
+        sessionStorage.setItem("controlCharDown", "false");
+    }
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
     fetch("header.html")
@@ -53,6 +67,10 @@ function set_header_callbacks(){
     const headerNavAnchors = document.querySelectorAll('header nav a');
 
     document.addEventListener('keydown', e => {
+        if(sessionStorage.getItem("controlCharDown") == "false"){
+            console.log("aborted!")
+            return;
+        }
         if(e.key >= '1' && e.key <= headerNavAnchors.length){
             headerNavAnchors[e.key-1].click();
         } 
