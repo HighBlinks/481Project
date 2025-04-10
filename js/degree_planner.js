@@ -60,7 +60,7 @@ function showCourseInfo(courseCode) {
     );
 
     // Get Course Info sidebar elements
-    const courseInfoRadio = document.getElementById("degree_requirements");
+    const courseInfoRadio = document.getElementById("course_info");
     const courseInfoBox = courseInfoRadio.nextElementSibling;
     
     // Activate the Course Info tab
@@ -70,7 +70,7 @@ function showCourseInfo(courseCode) {
     document.querySelectorAll('.sidebar_labels label').forEach(label => {
         label.classList.remove('label_checked');
     });
-    document.querySelector('label[for="degree_requirements"]').classList.add('label_checked');
+    document.querySelector('label[for="course_info"]').classList.add('label_checked');
     
     // Populate the course info
     const items = courseInfoBox.querySelectorAll('li');
