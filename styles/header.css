@@ -76,6 +76,42 @@ header nav{
     flex: 1;
 }
 
+.upperRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.upperLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.upperLeft a:link {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+.upperLeft a:visited {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+.upperLeft a:hover {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+.upperLeft a:active {
+    color: transparent;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
 header nav a {
     flex: 1;
     display: flex;
