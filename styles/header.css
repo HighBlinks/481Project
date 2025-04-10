@@ -81,7 +81,6 @@ header nav{
     gap: 20px;
     flex-direction: row;
     align-items: center;
-    /* padding-right: 20px; */
 }
 
 .upperLeft {

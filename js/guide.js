@@ -1,19 +1,22 @@
 let slideIndex = 1;
-showSlides(slideIndex);
+showSlides(slideIndex, 1);
+showSlides(slideIndex, 2);
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides(n, num) {
+  showSlides(slideIndex += n, num);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(n, num) {
+  showSlides(slideIndex = n, num);
 }
 
-function showSlides(n) {
+function showSlides(n, num) {
   let i;
-  let slides = document.getElementsByClassName("mySlides");
+  let string = "mySlides"
+  let input = string.concat(num);
+  let slides = document.getElementsByClassName(input);
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
