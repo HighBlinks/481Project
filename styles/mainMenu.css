@@ -41,9 +41,10 @@ main nav button:hover {
 /* Floating Dialog Box */
 .dialog-box {
     position: fixed;
-    top: 70px;
+    top: 25%;
     right: 20px;
-    width: 300px;
+    height:auto;
+    size: auto;
     background: white;
     border-radius: 12px;
     box-shadow: 0 5px 30px rgba(0,0,0,0.2);
