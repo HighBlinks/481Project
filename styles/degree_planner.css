@@ -21,8 +21,9 @@
     margin-bottom: 15px;
 }
 .save-icon {
-    width: 24px;
-    height: 30%px;
+    width: 50px;
+    height: 100%;
+    font-size: 1rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -255,6 +256,26 @@
     border-radius: 0 5px 5px 0;
 }
 
+.sidebar_labels {
+    padding-top:1rem;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+}
+
+.target_label {
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.target_label:hover {
+    background-color: #d4d4d4;
+    transform: scale(1.02);
+}
+
 .sidebar ul {
     list-style-type: none;
     padding: 0;
@@ -288,9 +309,13 @@
 .sidebar_labels > label:hover{
     background-color: rgba(0,0,0,0.2);
 }
-.label_checked{
-    background-color: rgba(0,0,0,0) !important;
+.label_checked {
+    background-color: #ffb3b3 !important; /* light red background */
+    color: #000; /* or #333 for dark gray text */
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .sidebar input[type="radio"]{
     display: none; /* get rid of ugly radio circles */
 }
