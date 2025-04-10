@@ -28,7 +28,7 @@ function style_current_page_btn(){
     const nav_a = document.querySelectorAll('header nav a');
     nav_a.forEach(a => {
         if(a.textContent == page){
-            a.classList.add("current_page")
+            a.classList.add("current_page");
         }
     })
 }
