@@ -358,6 +358,8 @@
     border-radius: 50%;
     background-color: #e74c3c;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Hover effects */
