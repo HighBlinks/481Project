@@ -23,7 +23,7 @@
 .save-icon {
     width: 50px;
     height: 100%;
-    font-size: 1.5rem;
+    font-size: 3rem;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -38,9 +38,9 @@
 /* Help Button */
 .help-icon {
     margin-left: auto;
-    width: 26px;
-    font-size: 1.25rem;
-    height: 26px;
+    width: 50px;
+    font-size: 2rem;
+    height: 50px;
     border-radius: 50%;
     background: #4a6bff;
     color: white;
