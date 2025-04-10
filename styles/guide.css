@@ -8,7 +8,7 @@
   }
   
   /* Hide the images by default */
-  .mySlides {
+  .mySlides1, .mySlides2 {
     display: none;
   }
   
@@ -28,7 +28,7 @@
     user-select: none;
   }
   
-  /* Position the "next button" to the right */
+  /* OVERWRITE: Position the "next button" to the right */
   .next {
     border-radius: 3px 0 0 3px;
     position: relative;
@@ -53,11 +53,10 @@
   
   /* Number text (1/3 etc) */
   .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+    color: blue;
+    font-size: 20px;
+    width: auto;
+    position: relative;
   }
   
   
