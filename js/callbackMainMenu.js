@@ -1,9 +1,8 @@
 
-const targets = document.querySelectorAll('.sidebar label');
+const targets = document.querySelectorAll('main nav button');
 
 document.addEventListener('keydown', e => {
     targets.forEach(target => {
-
         // avoid empty indexing errors
         if (! target.textContent.trim()) {
             return;
@@ -16,17 +15,3 @@ document.addEventListener('keydown', e => {
         }
     })
 })
-
-
-// all year-headers click when focused and Enter is pressed
-const year_headers = document.querySelectorAll('.year-header');
-
-year_headers.forEach(year_header =>{
-    year_header.addEventListener('keydown', click_on_enter)
-})
-
-function click_on_enter(k){
-    if (k.key=='Enter'){
-        this.click();
-    }
-}
