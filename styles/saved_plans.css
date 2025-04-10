@@ -45,3 +45,25 @@ main input[type="radio"]{
 input[type="radio"]:checked + .plan_details{
     display: inline;
 }
+
+.plan-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.delete-icon {
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    vertical-align: middle;
+    position: relative;
+    top: -6px; 
+}
+.delete-icon:hover {
+    color: #ed818c; 
+    transform: scale(1.3); 
+}
