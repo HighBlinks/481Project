@@ -269,3 +269,62 @@
 .delete-btn:hover {
     background-color: #c0392b;
 }
+
+/* Add to your CSS file */
+.requirements-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.requirements-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: 1px solid #dee2e6;
+}
+
+.requirement-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border-left: 4px solid #d7170c;
+}
+
+.requirement-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.requirement-options, .requirement-courses {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 2px solid #dee2e6;
+}
+
+.requirement-options li, .requirement-courses li {
+    margin-bottom: 5px;
+}
+
+/* Scrollbar styling */
+.requirements-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.requirements-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.requirements-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.requirements-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
