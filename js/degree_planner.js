@@ -52,6 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
             helpDialog.classList.remove('visible');
         }
     });
+    // Add this to your existing JavaScript
+document.querySelector('.save-icon').addEventListener('click', function() {
+    const popup = document.getElementById('save-popup');
+    popup.style.display = 'block';
+    
+    // Hide the popup after 2.5 seconds (matches the animation duration)
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 2500);
+});
 // degree_planner.js
 
 // Modified addInfoButtonToCourse function
