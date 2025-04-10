@@ -218,6 +218,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
+            // Check for anti-requisite: CPSC 319 vs CPSC 331
+            if (courseCode === "CPSC 319") {
+                const has331 = Array.from(document.querySelectorAll(".course"))
+                    .some(course => course.dataset.courseCode === "CPSC 331");
+
+                if (has331) {
+                    showPopup("Error: CPSC 319 and CPSC 331 are antirequisites.");
+                    return;
+                }
+            }
+            
+
             // Create draggable course div
             const courseDiv = document.createElement("div");
             courseDiv.classList.add("course");
