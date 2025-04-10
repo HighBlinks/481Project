@@ -1,24 +1,8 @@
-// track control key state with a boolean
-const CONTROL_KEY = 'a';
-
-document.addEventListener('keydown', e =>{
-    if (e.key == CONTROL_KEY){
-        sessionStorage.setItem("controlCharDown", "true");
-    }
-});
-document.addEventListener('keyup', e =>{
-    if (e.key == CONTROL_KEY){
-        sessionStorage.setItem("controlCharDown", "false");
-    }
-});
-
-
 const targets = document.querySelectorAll('.sidebar label');
 
 document.addEventListener('keydown', e => {
     targets.forEach(target => {
-        if (sessionStorage.getItem("controlCharDown" == "false")){
-            console.log("hhhhhhhhh")
+        if (sessionStorage.getItem("controlCharDown") == "false"){
             return;
         }
         // avoid empty indexing errors
