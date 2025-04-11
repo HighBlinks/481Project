@@ -274,11 +274,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const targetTerm = document.getElementById(targetId);
             targetTerm.appendChild(courseDiv);
-            // Get the specific year header
-            const yearHeader = targetTerm.closest(".year").querySelector(".year-header");
-
-            // Trigger a click to expand
-            if (yearHeader) {
+            const yearContainer = targetTerm.closest(".year");
+            const yearHeader = yearContainer.querySelector(".year-header");
+            const yearContent = yearContainer.querySelector(".year-content");
+            
+            // Show the year section if it's hidden (display: none)
+            const isYearHidden = window.getComputedStyle(yearContainer).display === "none";
+            if (isYearHidden) {
+                yearContainer.style.display = "block";
+            }
+            
+            // copen the year section if year-content is still collapsed
+            const isCollapsed = window.getComputedStyle(yearContent).display === "none";
+            if (isCollapsed) {
                 yearHeader.click();
             }
         }
