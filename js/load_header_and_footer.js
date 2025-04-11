@@ -1,3 +1,5 @@
+sessionStorage.setItem("controlCharDown", "false")
+
 // track control key state with a boolean
 const CONTROL_KEY_ = 'a';
 
