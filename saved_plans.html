@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="styles/saved_plans.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/confirmationPopup.css">
     <title>View Saved Plans</title>
 
     <script defer src="js/load_header_and_footer.js"></script>
     <script defer src="js/targetLabels.js"></script>
     <script defer src="js/callbackSavedPlans.js"></script>
+    <script defer src="js/confirmationPopup.js"></script>
 </head>
 <body data-page="Saved Plans" class="loading">
     <div id="header-placeholder"></div> <!-- Header will load here -->
@@ -31,7 +33,7 @@
             <div class="plan_details">
                 <div class="plan-header">
                     <h2>Plan # 1</h2>
-                    <button class="delete-icon" title="delete">🗑</button>
+                    <button class="delete-icon" title="delete" onclick="displayPopup()">🗑</button>
                 </div>
                 <hr>
                 <b>Major:</b> Computer Science <br>
@@ -125,5 +127,14 @@
         <button class="back-icon"onclick="location.href='mainMenu.html'" title="Back">🔙</button>
     </main>
     <div id="footer-placeholder"></div> <!-- Footer will load here -->
+    <div id="popupBackdrop">
+        <div id="confirmationPopup">
+            <h4>Are you sure you want to delete?</h4>
+            <div class="btnPanel">
+                <button class="regular_button" onclick="hidePopup()">Yes</button>
+                <button class="regular_button" onclick="hidePopup()">No</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

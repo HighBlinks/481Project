@@ -1,0 +1,40 @@
+#popupBackdrop{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+#confirmationPopup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: clamp(30rem, 25%, 50rem);
+    padding: 1rem;
+    z-index: 100;
+
+    border-radius: 1rem;
+
+    border: grey solid 1px;
+
+    background-color: #EEE;
+    box-shadow: 5px 5px 5px 10px rgba(0,0,0,0.2);
+}
+
+#confirmationPopup .btnPanel{
+    display: flex;
+    gap: 1em;
+}
+
+#confirmationPopup .btnPanel button{
+    width: 50rem;
+}
