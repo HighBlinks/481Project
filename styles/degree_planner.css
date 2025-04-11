@@ -13,6 +13,11 @@
 }
 
 /* --------------- title, save icon, help icon --------------- */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .title-container {
     display: flex;
     align-items: center;
@@ -70,7 +75,6 @@
     background: #3a5bef;
     transform: scale(1.1);
 }
-
 
 #save-popup {
     position: absolute;
