@@ -1,5 +1,6 @@
 // track control key state with a boolean
 const CONTROL_KEY_ = 'a';
+sessionStorage.setItem("controlCharDown", "false");
 
 document.addEventListener('keydown', e =>{
     if (e.key == CONTROL_KEY_){
@@ -14,7 +15,6 @@ document.addEventListener('keyup', e =>{
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    sessionStorage.setItem("controlCharDown", "false");
     fetch("header.html")
         .then(response => response.text())
         .then(data => {
