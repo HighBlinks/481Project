@@ -67,12 +67,19 @@ function set_header_callbacks(){
     const headerNavAnchors = document.querySelectorAll('header nav a');
 
     document.addEventListener('keydown', e => {
+        if (sessionStorage.getItem("controlCharDown") == null){
+            return;
+        }
         if(sessionStorage.getItem("controlCharDown") == "false"){
-            console.log("aborted!")
             return;
         }
         if(e.key >= '1' && e.key <= headerNavAnchors.length){
             headerNavAnchors[e.key-1].click();
         } 
     })
+}
+
+function logout(){
+    sessionStorage.clear();
+    document.location = "index.html";
 }

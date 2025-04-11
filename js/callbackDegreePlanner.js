@@ -2,6 +2,9 @@ const targets = document.querySelectorAll('.sidebar label');
 
 document.addEventListener('keydown', e => {
     targets.forEach(target => {
+        if (sessionStorage.getItem("controlCharDown") == null){
+            return;
+        }
         if (sessionStorage.getItem("controlCharDown") == "false"){
             return;
         }
