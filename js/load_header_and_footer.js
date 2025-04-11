@@ -14,6 +14,7 @@ document.addEventListener('keyup', e =>{
 
 
 document.addEventListener("DOMContentLoaded", function () {
+    sessionStorage.setItem("controlCharDown", "false");
     fetch("header.html")
         .then(response => response.text())
         .then(data => {
