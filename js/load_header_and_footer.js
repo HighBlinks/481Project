@@ -1,16 +1,17 @@
 // track control key state with a boolean
 const CONTROL_KEY_ = 'a';
-if(typeof(localStorage.getItem("username"))=='undefined'){
-    sessionStorage.setItem("controlCharDown", "false");
+
+if(localStorage.getItem("controlCharDown")==null){
+    sessionStorage.setItem("controlCharDown", "false")
 }
 
 document.addEventListener('keydown', e =>{
-    if (e.key == CONTROL_KEY_){
+    if (e.key.toLowerCase() == CONTROL_KEY_){
         sessionStorage.setItem("controlCharDown", "true");
     }
 });
 document.addEventListener('keyup', e =>{
-    if (e.key == CONTROL_KEY_){
+    if (e.key.toLowerCase() == CONTROL_KEY_){
         sessionStorage.setItem("controlCharDown", "false");
     }
 });
