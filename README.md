@@ -45,4 +45,12 @@ Name, Major, Double Major, Concentration, Minor are all hard code and while you 
 
 You can modify the take spring/summer courses as well as the number of years. These settings will be reflected in the degree plan that loads when you click submit. 
 
+# Deadlines & Info buttons/User Guide buttons
+leads to their respective pages, the links on those pages work 
+
+# Settings page
+None of these buttons work
+
+# Keybindings 
+
 keybindings headeres tabgs require u press a unique A each time (can't)
