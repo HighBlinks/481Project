@@ -52,5 +52,14 @@ leads to their respective pages, the links on those pages work
 None of these buttons work
 
 # Keybindings 
+Can press A and 1 to get to Main Menu
+Can press A and 2 to get to Saved Plans page
+Can press A and 3 to get to Degree Planner page
+Can press A and 4 to get to the Settings page
 
-keybindings headeres tabgs require u press a unique A each time (can't)
+Note that to toggle the header tabs by keybinding they require you press a unique A each time (can't press and hold A and toggle through all thee pages)
+
+On the degree planner page, can use the following keybindings to navigate the sidebar:
+Can press A and S to get to Search tab
+Can press A and D to get to Degree Info tab
+Can press A and C to get to Course Info tab
