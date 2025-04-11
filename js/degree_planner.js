@@ -274,6 +274,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const targetTerm = document.getElementById(targetId);
             targetTerm.appendChild(courseDiv);
+            // Get the specific year header
+            const yearHeader = targetTerm.closest(".year").querySelector(".year-header");
+
+            // Trigger a click to expand
+            if (yearHeader) {
+                yearHeader.click();
+            }
         }
     });
 
