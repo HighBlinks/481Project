@@ -1,6 +1,8 @@
 // track control key state with a boolean
 const CONTROL_KEY_ = 'a';
-sessionStorage.setItem("controlCharDown", "false");
+if(typeof(localStorage.getItem("username"))=='undefined'){
+    sessionStorage.setItem("controlCharDown", "false");
+}
 
 document.addEventListener('keydown', e =>{
     if (e.key == CONTROL_KEY_){
