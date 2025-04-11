@@ -23,6 +23,12 @@
     width: 7rem;
 }
 
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
 
 /* ---------------------------- FOOTER ---------------------------- */
 /* styles in footer.css */

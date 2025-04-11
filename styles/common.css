@@ -64,11 +64,30 @@ select{
     text-decoration: none;
     transition: 0.3s ease;
 }
+
+.cancel_button {
+    display: flex;
+    padding: 10px 16px;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+    background: lightgrey;
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
 .no_decoration{
     text-decoration: none;
 }
 main button:hover {
     background: #b82036; /* Darker red on hover */
+    color: white;
 }
 .edit_button {
     display: inline-block;
