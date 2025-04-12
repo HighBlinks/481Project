@@ -23,7 +23,7 @@ The delete button is not implemented and will not actually delete a plan.
 #  Degree Planner Page: 
 You can click on each year header to expand the section. 
 
-Funcionalties Implemented: 
+Functionalties Implemented: 
 - Can click a course to mark it complete (should turn green)
 - Can click the x button to remove the course 
 - Can click the i button to display Course Info in the sidebar
