@@ -1,4 +1,7 @@
+Note: If you wish to try out the code for yourself, install the live server extension in Visual Studio Code, right click on index.html and click "Open with Live Server"
+
 # Login Page: 
+
 To enter you can leave both username and password blank to be logged in as a guest 
 OR
 Username = Plebian Dunce
