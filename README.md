@@ -1,3 +1,11 @@
+Group 01:
+Binish Khalid (binish.khalid@ucalgary.ca);
+Nathaniel Dafoe(nathaniel.dafoe@ucalgary.ca);
+Julian Fan(julian.fan@ucalgary.ca);
+Kazi Arif(kazi.arif@ucalgary.ca);
+Vincent Tsin(vincent.tsin@ucalgary.ca).
+
+
 Note: If you wish to try out the code for yourself, install the live server extension in Visual Studio Code, right click on index.html and click "Open with Live Server"
 
 # Login Page: 
