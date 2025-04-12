@@ -1,4 +1,4 @@
-Group 01:
+# Group 01:
 Binish Khalid (binish.khalid@ucalgary.ca);
 Nathaniel Dafoe(nathaniel.dafoe@ucalgary.ca);
 Julian Fan(julian.fan@ucalgary.ca);
